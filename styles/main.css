@@ -124,3 +124,49 @@ footer {
         gap: 0.5rem;
     }
 }
+
+/* ======================
+   Navigation Styles
+   ====================== */
+
+.menu-button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.navigation {
+    display: none;           /* Hidden by default on mobile */
+}
+
+.navigation.show {
+    display: block;          /* Shown when toggled */
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navigation a {
+    display: block;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navigation a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.current a {
+    background-color: #333;
+    color: white;
+}

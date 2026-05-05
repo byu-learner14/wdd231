@@ -1,0 +1,28 @@
+/* ======================
+   Large Screen Styles
+   ====================== */
+
+@media (min-width: 768px) {
+
+    .menu-button {
+        display: none;               /* Hide hamburger on desktop */
+    }
+
+    .navigation {
+        display: block;              /* Always show on large screens */
+    }
+
+    .navigation ul {
+        display: flex;               /* Horizontal layout */
+        gap: 0.5rem;
+    }
+
+    .navigation li {
+        border-bottom: none;         /* Remove underline */
+    }
+
+    .navigation a {
+        padding: 1rem 1.2rem;
+        border-radius: 4px;
+    }
+}
