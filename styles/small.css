@@ -223,3 +223,37 @@ footer {
   height: 32px;
   filter: brightness(0) invert(1);
 }
+
+/* Fix for logo link */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: white;
+}
+
+.logo img {
+  flex-shrink: 0;
+}
+
+/* Better list styles for navigation */
+#navigation ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Make sure course section has proper class */
+.courses {
+  margin-top: 2rem;
+}
+
+/* Improve readability */
+main p {
+  max-width: 65ch;
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
