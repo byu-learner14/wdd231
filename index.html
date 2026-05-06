@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 231 – Web Frontend Development I – Olivia Crawford</title>
+  <meta name="description" content="WDD 231 – Web Frontend Development I course homepage by Olivia Crawford. Personal introduction, web frontend development resources, and project showcase for BYU-Idaho.">
+  <meta name="author" content="Olivia Crawford">
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+  <!-- Normalize comes first -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  
+  <!-- Custom styles - small first, then large with media query -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <!-- Site Logo + Name -->
+      <div class="logo">
+        <a href="index.html" class="logo">
+          <img src="images/logo.svg" alt="Olivia Crawford Logo" width="48" height="48">
+          <span class="site-name">Olivia Crawford</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Button -->
+      <button id="menu" aria-label="Toggle navigation menu">☰</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#">Chamber Project</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <!-- About Me & Photo Section -->
+    <div class="about-grid">
+      <section class="about-me">
+        <h2>About Me</h2>
+        <p>
+          Hello! My name is Olivia Crawford and I live in Hawaii.  
+          I'm currently taking WDD 231 to learn Web Frontend Development I skills.  
+          I enjoy playing tennis, going swimming, family, travel, learning tech, and more.  
+          Looking forward to building more web projects!
+        </p>
+      </section>
+
+      <section class="student-photo">
+        <h2>Student Photo</h2>
+        <img src="images/student-photo.jpg" alt="Olivia Crawford - Student Photo" class="photo">
+      </section>
+    </div>
+
+    <!-- Courses Section -->
+    <section class="courses">
+      <h2>Web Certificate Courses</h2>
+      
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="CSE">CSE</button>
+        <button class="filter-btn" data-filter="WDD">WDD</button>
+      </div>
+
+      <div id="course-list" class="course-grid">
+        <!-- Courses will be injected by JavaScript -->
+      </div>
+
+      <p id="total-credits">Total credits: <span id="credit-count">0</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://github.com" target="_blank" aria-label="GitHub"><img src="images/github.png" alt="GitHub"></a>
+      <a href="#" target="_blank" aria-label="X/Twitter"><img src="images/x.png" alt="X"></a>
+    </div>
+
+    <p>
+      &copy; <span id="currentyear"></span> • Olivia Crawford • Hawaii, USA
+    </p>
+    
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <!-- JavaScript files (defer = runs after HTML is parsed) -->
+  <script defer src="scripts/date.js"></script>
+  <script defer src="scripts/navigation.js"></script>
+  <script defer src="scripts/courses.js"></script>
+</body>
+</html>

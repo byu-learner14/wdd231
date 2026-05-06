@@ -1,0 +1,225 @@
+/* ====================== SMALL.CSS ====================== */
+/* Mobile-first styles - Applies to all screen sizes first */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #2563eb;
+  --dark: #1e2937;
+  --light: #f8fafc;
+  --accent: #3b82f6;
+  --gray: #64748b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: #f8fafc;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--dark);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.site-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+#menu {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Navigation - Hidden by default on mobile */
+#navigation {
+  display: none;
+  background-color: var(--dark);
+}
+
+#navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation li a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+#navigation li a:hover,
+#navigation li a.active {
+  background-color: var(--accent);
+}
+
+/* Main Content */
+main {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: var(--dark);
+  margin-bottom: 2rem;
+}
+
+.about-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.about-me, .student-photo {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.about-me h2, .student-photo h2 {
+  background-color: var(--dark);
+  color: white;
+  margin: 0;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+.about-me p {
+  padding: 1.5rem;
+  margin: 0;
+}
+
+.photo {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+/* Courses Section */
+.courses h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.65rem 1.25rem;
+  border: 2px solid var(--primary);
+  background: white;
+  color: var(--primary);
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.course-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.course-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  border-left: 5px solid var(--gray);
+}
+
+.course-card.completed {
+  border-left-color: #22c55e;
+  background-color: #f0fdf4;
+}
+
+.course-card h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.course-card p {
+  margin: 0.5rem 0;
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+.credits {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+#total-credits {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.social-links {
+  margin-bottom: 1.5rem;
+}
+
+.social-links a {
+  margin: 0 12px;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.social-links img {
+  height: 32px;
+  filter: brightness(0) invert(1);
+}

@@ -1,28 +1,60 @@
-/* ======================
-   Large Screen Styles
-   ====================== */
+/* ====================== LARGE.CSS ====================== */
+/* Desktop styles + media query */
 
 @media (min-width: 768px) {
+  
+  .header-content {
+    padding: 1rem 2rem;
+  }
 
-    .menu-button {
-        display: none;               /* Hide hamburger on desktop */
-    }
+  #menu {
+    display: none; /* Hide hamburger on large screens */
+  }
 
-    .navigation {
-        display: block;              /* Always show on large screens */
-    }
+  #navigation {
+    display: block !important;
+  }
 
-    .navigation ul {
-        display: flex;               /* Horizontal layout */
-        gap: 0.5rem;
-    }
+  #navigation ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
 
-    .navigation li {
-        border-bottom: none;         /* Remove underline */
-    }
+  #navigation li a {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
 
-    .navigation a {
-        padding: 1rem 1.2rem;
-        border-radius: 4px;
-    }
+  .about-grid {
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .student-photo .photo {
+    height: 380px;
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  main {
+    padding: 2rem 2rem;
+  }
+
+  footer {
+    padding: 2.5rem;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1024px) {
+  main {
+    padding: 2rem 4rem;
+  }
 }
