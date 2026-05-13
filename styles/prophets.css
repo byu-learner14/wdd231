@@ -1,0 +1,56 @@
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+section {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #2c3e50;
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 0.8rem 0;
+}
+
+p {
+  margin: 0.8rem 0;
+  color: #34495e;
+  font-size: 0.95rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  color: #666;
+}
