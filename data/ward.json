@@ -1,0 +1,28 @@
+{
+  "family_name": "Crawford",
+  "move_in_date": "2025-01-15",
+  "number_of_people": 4,
+  "visited_by_bishopric": true,
+  "family_members": [
+    {
+      "name": "Karin Crawford",
+      "gender": "Female",
+      "birthdate": "1980-06-12"
+    },
+    {
+      "name": "Tom Crawford",
+      "gender": "Male",
+      "birthdate": "1879-11-22"
+    },
+    {
+      "name": "Emma Crawford",
+      "gender": "Female",
+      "birthdate": "2010-03-08"
+    },
+    {
+      "name": "Oliver Crawford",
+      "gender": "Male",
+      "birthdate": "2015-09-30"
+    }
+  ]
+}
