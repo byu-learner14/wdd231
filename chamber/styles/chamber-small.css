@@ -1,0 +1,98 @@
+/* chamber-small.css - Mobile First */
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  background-color: #003087;
+  color: white;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.view-controls {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.view-controls button {
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.5rem;
+  border: 1px solid #003087;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.view-controls button.active {
+  background: #003087;
+  color: white;
+}
+
+#directory-container {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.member-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.member-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.membership {
+  font-weight: bold;
+  padding: 0.4rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.membership.gold { background: #ffd700; color: #003087; }
+.membership.silver { background: #c0c0c0; color: #003087; }
+.membership.member { background: #90ee90; color: #003087; }
+
+footer {
+  background: #003087;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}

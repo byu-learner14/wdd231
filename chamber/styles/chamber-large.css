@@ -1,0 +1,25 @@
+/* chamber-large.css - Larger screens */
+
+@media (min-width: 768px) {
+  .logo img {
+    width: 90px;
+    height: 90px;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  #directory-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .member-card {
+    text-align: left;
+    padding: 1.5rem;
+  }
+
+  .member-card img {
+    max-height: 220px;
+  }
+}

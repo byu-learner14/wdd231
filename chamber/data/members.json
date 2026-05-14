@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "Aloha Coffee Co.",
+      "address": "123 Kalakaua Ave, Honolulu, HI 96815",
+      "phone": "(808) 555-0123",
+      "website": "https://alohacoffee.example.com",
+      "image": "aloha-coffee.jpg",
+      "membership": "Gold"
+    },
+    {
+      "name": "Pacific Surf Shop",
+      "address": "456 Waikiki Blvd, Honolulu, HI 96815",
+      "phone": "(808) 555-0456",
+      "website": "https://pacificsurf.example.com",
+      "image": "surf-shop.jpg",
+      "membership": "Silver"
+    },
+    {
+      "name": "Hawaii Fresh Market",
+      "address": "789 King St, Honolulu, HI 96813",
+      "phone": "(808) 555-0789",
+      "website": "https://hawaiifresh.example.com",
+      "image": "farmers-market.jpg",
+      "membership": "Gold"
+    },
+    {
+      "name": "Diamond Head Tours",
+      "address": "101 Diamond Head Rd, Honolulu, HI 96816",
+      "phone": "(808) 555-1011",
+      "website": "https://diamondheadtours.example.com",
+      "image": "diamondhead.jpg",
+      "membership": "Member"
+    },
+    {
+      "name": "Maui Brewing Co. Honolulu",
+      "address": "202 Ala Moana Blvd, Honolulu, HI 96814",
+      "phone": "(808) 555-2023",
+      "website": "https://mauibrewing.example.com",
+      "image": "maui-brewing.jpg",
+      "membership": "Silver"
+    },
+    {
+      "name": "Island Insurance",
+      "address": "345 Queen St, Honolulu, HI 96813",
+      "phone": "(808) 555-3456",
+      "website": "https://islandinsurance.example.com",
+      "image": "insurance.jpg",
+      "membership": "Gold"
+    },
+    {
+      "name": "Hawaiian Tech Solutions",
+      "address": "678 Kapiolani Blvd, Honolulu, HI 96813",
+      "phone": "(808) 555-6789",
+      "website": "https://hawaiiantech.example.com",
+      "image": "tech-solutions.jpg",
+      "membership": "Member"
+    }
+  ]
+}

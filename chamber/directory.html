@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directory | Honolulu Chamber of Commerce</title>
+  <meta name="description" content="Discover local businesses and member organizations in Honolulu, Hawaii.">
+  <meta name="author" content="Olivia Crawford">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+  <!-- Social Media Meta -->
+  <meta property="og:title" content="Business Directory | Honolulu Chamber of Commerce">
+  <meta property="og:description" content="Find trusted member businesses in Honolulu, Hawaii.">
+  <meta property="og:image" content="https://byu-learner14.github.io/wdd231/chamber/images/og-image.jpg">
+  <meta property="og:url" content="https://byu-learner14.github.io/wdd231/chamber/directory.html">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/chamber-small.css">
+  <link rel="stylesheet" href="styles/chamber-large.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <img src="images/logo.png" alt="Honolulu Chamber of Commerce Logo" width="80" height="80">
+        <div>
+          <h1>Honolulu Chamber</h1>
+          <p>of Commerce</p>
+        </div>
+      </div>
+      <button id="menu" aria-label="Toggle Menu">☰</button>
+    </div>
+    
+    <nav id="navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="#">Join Us</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Member Directory</h1>
+    
+    <div class="view-controls">
+      <button id="grid-btn" class="active">Grid View</button>
+      <button id="list-btn">List View</button>
+    </div>
+
+    <div id="directory-container"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Honolulu Chamber of Commerce | Olivia Crawford | WDD 231</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script defer src="scripts/directory.js"></script>
+</body>
+</html>
