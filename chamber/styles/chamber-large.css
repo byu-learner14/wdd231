@@ -55,7 +55,9 @@
   }
 
   .member-card img {
-    max-height: 240px;
+    max-width: 220px;
+    height: 140px;
+    max-height: 160px;
   }
 
   .view-controls button {
