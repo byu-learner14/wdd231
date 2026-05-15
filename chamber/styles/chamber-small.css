@@ -1,4 +1,4 @@
-/* chamber-small.css - Mobile First + CLS Fix */
+/* chamber-small.css - Mobile First + Performance & Accessibility Fixes */
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
@@ -33,16 +33,41 @@ header {
   height: 70px;
 }
 
-/* === Directory Container - Important for CLS === */
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+/* Navigation */
+#navigation ul {
+  display: none;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: #003087;
+  margin: 0;
+  list-style: none;
+}
+
+#navigation ul.show {
+  display: flex;
+}
+
+#navigation a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
+}
+
+/* Directory */
 #directory-container {
   display: grid;
   gap: 1.5rem;
-  padding: 0 1rem;
-  min-height: 700px;           /* Reserves space */
+  padding: 1rem;
+  min-height: 700px;
   grid-template-columns: 1fr;
 }
 
-/* Card Stability */
 .member-card {
   background: #ffffff;
   border: 2px solid #e0e0e0;
@@ -50,7 +75,7 @@ header {
   padding: 1.2rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  min-height: 380px;           /* Prevents shift when content loads */
+  min-height: 400px;
 }
 
 .member-card img {
@@ -60,12 +85,21 @@ header {
   object-fit: contain;
   border-radius: 8px;
   margin-bottom: 1rem;
-  background-color: #f5f5f5;   /* Placeholder while loading */
+  background-color: #f5f5f5;
 }
 
-/* Rest of your styles (membership, buttons, footer, etc.) */
+.member-card h3 {
+  color: #003087;
+  margin: 0.8rem 0 0.5rem 0;
+}
+
+.view-controls {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
 .view-controls button {
-  padding: 0.7rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   margin: 0 0.5rem;
   border: 2px solid #003087;
   background: white;
@@ -73,6 +107,7 @@ header {
   cursor: pointer;
   border-radius: 6px;
   font-weight: 600;
+  min-height: 48px; /* Better touch target */
 }
 
 .view-controls button.active {

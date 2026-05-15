@@ -3,6 +3,14 @@ const url = 'data/members.json';
 const container = document.querySelector('#directory-container');
 const gridBtn = document.getElementById('grid-btn');
 const listBtn = document.getElementById('list-btn');
+const menuButton = document.getElementById('menu');
+const navigation = document.getElementById('navigation');
+
+// Hamburger Menu
+menuButton.addEventListener('click', () => {
+  navigation.classList.toggle('show');
+  menuButton.textContent = navigation.classList.contains('show') ? '✕' : '☰';
+});
 
 // Fetch and display members
 async function getMembers() {
@@ -19,13 +27,11 @@ async function getMembers() {
         Sorry, we couldn't load the directory. Please try again later.
       </p>`;
   }
-};
+}
 
-// Display members as cards
+// Display members
 const displayMembers = (members) => {
-  container.innerHTML = ''; 
-
-  // Brief fade effect to reduce perceived layout shift
+  container.innerHTML = '';
   container.style.opacity = '0';
 
   members.forEach(member => {
@@ -50,14 +56,14 @@ const displayMembers = (members) => {
     container.appendChild(card);
   });
 
-  // Fade in the cards
+  // Fade in to reduce perceived layout shift
   setTimeout(() => {
     container.style.transition = 'opacity 0.4s ease';
     container.style.opacity = '1';
   }, 50);
 };
 
-// Grid / List View Toggle
+// View Toggle (Grid / List)
 function setView(view) {
   if (view === 'grid') {
     container.classList.remove('list-view');
@@ -75,9 +81,9 @@ function setView(view) {
 gridBtn.addEventListener('click', () => setView('grid'));
 listBtn.addEventListener('click', () => setView('list'));
 
-// Footer dynamic content
+// Footer
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
 
-// Start the app
+// Initialize
 getMembers();
