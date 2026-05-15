@@ -1,15 +1,45 @@
-/* chamber-large.css - Larger screens */
+/* chamber-large.css - Desktop & Tablet Styles */
 
 @media (min-width: 768px) {
+  .header-content {
+    padding: 0 1rem;
+  }
+
   .logo img {
     width: 90px;
     height: 90px;
   }
 
-  h1 {
-    font-size: 2.2rem;
+  .logo h2 {
+    font-size: 2rem;
   }
 
+  /* Navigation - Horizontal on large screens */
+  #navigation ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0;
+    background: transparent;
+  }
+
+  #navigation ul.show {
+    display: flex;
+  }
+
+  #menu {
+    display: none; /* Hide hamburger on large screens */
+  }
+
+  main {
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Directory Grid */
   #directory-container.grid-view {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
@@ -26,5 +56,10 @@
 
   .member-card img {
     max-height: 240px;
+  }
+
+  .view-controls button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1.05rem;
   }
 }
