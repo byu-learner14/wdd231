@@ -4,21 +4,26 @@ const container = document.querySelector('#directory-container');
 const gridBtn = document.getElementById('grid-btn');
 const listBtn = document.getElementById('list-btn');
 
-// Fetch members data
+// Fetch and display members
 async function getMembers() {
   try {
     const response = await fetch(url);
+    if (!response.ok) throw new Error('Network response was not ok');
+    
     const data = await response.json();
     displayMembers(data.members);
   } catch (error) {
     console.error('Error loading members:', error);
-    container.innerHTML = '<p>Sorry, we couldn\'t load the directory. Please try again later.</p>';
+    container.innerHTML = `
+      <p style="grid-column: 1 / -1; text-align: center; color: #d32f2f; padding: 2rem;">
+        Sorry, we couldn't load the directory. Please try again later.
+      </p>`;
   }
 }
 
-// Display all member cards
+// Display members as cards
 const displayMembers = (members) => {
-  container.innerHTML = '';   // Clear any previous content
+  container.innerHTML = '';   // Clear previous content
 
   members.forEach(member => {
     const card = document.createElement('section');
@@ -27,7 +32,9 @@ const displayMembers = (members) => {
     card.innerHTML = `
       <img src="images/${member.image}" 
            alt="${member.name} business logo" 
-           loading="lazy">
+           loading="lazy"
+           width="300" 
+           height="200">
       <h3>${member.name}</h3>
       <p>${member.address}</p>
       <p><strong>Phone:</strong> ${member.phone}</p>
@@ -41,26 +48,27 @@ const displayMembers = (members) => {
   });
 };
 
-// === View Toggle (Grid / List) ===
-gridBtn.addEventListener('click', () => {
-  container.classList.remove('list-view');
-  container.classList.add('grid-view');
-  
-  gridBtn.classList.add('active');
-  listBtn.classList.remove('active');
-});
+// Grid / List View Toggle
+function setView(view) {
+  if (view === 'grid') {
+    container.classList.remove('list-view');
+    container.classList.add('grid-view');
+    gridBtn.classList.add('active');
+    listBtn.classList.remove('active');
+  } else {
+    container.classList.remove('grid-view');
+    container.classList.add('list-view');
+    listBtn.classList.add('active');
+    gridBtn.classList.remove('active');
+  }
+}
 
-listBtn.addEventListener('click', () => {
-  container.classList.remove('grid-view');
-  container.classList.add('list-view');
-  
-  listBtn.classList.add('active');
-  gridBtn.classList.remove('active');
-});
+gridBtn.addEventListener('click', () => setView('grid'));
+listBtn.addEventListener('click', () => setView('list'));
 
-// === Footer Dynamic Info ===
+// Footer dynamic content
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
 
-// Start everything
+// Initialize the page
 getMembers();
