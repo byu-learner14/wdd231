@@ -15,15 +15,18 @@ async function getMembers() {
   } catch (error) {
     console.error('Error loading members:', error);
     container.innerHTML = `
-      <p style="grid-column: 1 / -1; text-align: center; color: #d32f2f; padding: 2rem;">
+      <p style="grid-column: 1 / -1; text-align: center; color: #d32f2f; padding: 3rem 1rem;">
         Sorry, we couldn't load the directory. Please try again later.
       </p>`;
   }
-}
+};
 
 // Display members as cards
 const displayMembers = (members) => {
-  container.innerHTML = '';   // Clear previous content
+  container.innerHTML = ''; 
+
+  // Brief fade effect to reduce perceived layout shift
+  container.style.opacity = '0';
 
   members.forEach(member => {
     const card = document.createElement('section');
@@ -46,6 +49,12 @@ const displayMembers = (members) => {
 
     container.appendChild(card);
   });
+
+  // Fade in the cards
+  setTimeout(() => {
+    container.style.transition = 'opacity 0.4s ease';
+    container.style.opacity = '1';
+  }, 50);
 };
 
 // Grid / List View Toggle
@@ -70,5 +79,5 @@ listBtn.addEventListener('click', () => setView('list'));
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
 
-// Initialize the page
+// Start the app
 getMembers();

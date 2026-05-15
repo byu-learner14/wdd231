@@ -1,4 +1,4 @@
-/* chamber-small.css - Mobile First + Improved Contrast */
+/* chamber-small.css - Mobile First + CLS Fix */
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
@@ -33,16 +33,37 @@ header {
   height: 70px;
 }
 
-h1 {
-  margin: 0;
-  font-size: 1.6rem;
+/* === Directory Container - Important for CLS === */
+#directory-container {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  min-height: 700px;           /* Reserves space */
+  grid-template-columns: 1fr;
 }
 
-.view-controls {
+/* Card Stability */
+.member-card {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.2rem;
   text-align: center;
-  margin: 1.5rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  min-height: 380px;           /* Prevents shift when content loads */
 }
 
+.member-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: #f5f5f5;   /* Placeholder while loading */
+}
+
+/* Rest of your styles (membership, buttons, footer, etc.) */
 .view-controls button {
   padding: 0.7rem 1.4rem;
   margin: 0 0.5rem;
@@ -59,35 +80,6 @@ h1 {
   color: white;
 }
 
-#directory-container {
-  display: grid;
-  gap: 1.5rem;
-  padding: 0 1rem;
-}
-
-.member-card {
-  background: #ffffff;
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 1.2rem;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-}
-
-.member-card img {
-  width: 100%;
-  height: auto;
-  max-height: 180px;
-  object-fit: contain;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.member-card h3 {
-  color: #003087;
-  margin: 0.8rem 0 0.5rem 0;
-}
-
 .membership {
   font-weight: bold;
   padding: 0.5rem 1rem;
@@ -96,21 +88,9 @@ h1 {
   display: inline-block;
 }
 
-/* Improved Contrast Colors */
-.membership.gold {
-  background: #D4AF37;
-  color: #1a1a1a;
-}
-
-.membership.silver {
-  background: #a8a8a8;
-  color: #1a1a1a;
-}
-
-.membership.member {
-  background: #4CAF50;
-  color: white;
-}
+.membership.gold { background: #D4AF37; color: #1a1a1a; }
+.membership.silver { background: #a8a8a8; color: #1a1a1a; }
+.membership.member { background: #4CAF50; color: white; }
 
 footer {
   background: #003087;
