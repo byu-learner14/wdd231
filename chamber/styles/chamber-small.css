@@ -1,4 +1,4 @@
-/* chamber-small.css - Mobile First + Performance & Accessibility Fixes */
+/* chamber-small.css - Mobile First */
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
@@ -45,7 +45,6 @@ header {
   border: none;
   color: white;
   cursor: pointer;
-  padding: 0.5rem;
   min-width: 44px;
   min-height: 44px;
 }
@@ -69,10 +68,9 @@ header {
   color: white;
   text-decoration: none;
   padding: 0.6rem 0;
-  font-size: 1.1rem;
 }
 
-/* Directory Content */
+/* Main Content */
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -107,7 +105,7 @@ h1 {
   color: white;
 }
 
-/* Directory Container - Important for CLS */
+/* Directory Cards */
 #directory-container {
   display: grid;
   gap: 1.5rem;
@@ -127,15 +125,15 @@ h1 {
 
 .member-card img {
   width: 100%;
-  max-width: 180px;           /* Controls logo size */
-  height: 120px;              /* Fixed height for consistency */
-  object-fit: contain;        /* Keeps proportions without distortion */
+  max-width: 200px;
+  height: 130px;
+  object-fit: contain;
   border-radius: 8px;
-  margin: 0 auto 1rem auto;   /* Centers the image */
+  margin: 0 auto 1rem auto;
   display: block;
   background-color: #f8f9fa;
-  padding: 8px;
-  border: 1px solid #eee;
+  padding: 10px;
+  border: 1px solid #eeeeee;
 }
 
 .member-card h3 {
