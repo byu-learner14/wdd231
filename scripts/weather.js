@@ -8,7 +8,10 @@ const lat = 49.75;
 const lon = 6.64;
 
 // Paste the API key here
-const apiKey = "6d36cd08c88816c65796dff3e51e3867";
+// const apiKey = "6d36cd08c88816c65796dff3e51e3867";
+
+// === TEMPORARY TEST KEY (for debugging) ===
+const apiKey = "bd5e378503939ddaee76f12ad7a97608";
 
 const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
 
