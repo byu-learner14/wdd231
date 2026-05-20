@@ -60,7 +60,8 @@ header {
   background: #003087;
 }
 
-#navigation ul.show {
+/* FIXED: Hamburger Menu */
+#navigation.show ul {
   display: flex;
 }
 
@@ -105,7 +106,7 @@ h1 {
   color: white;
 }
 
-/* Directory Cards - Optimized for Mobile */
+/* Directory Cards - Grid View (Mobile) */
 #directory-container {
   display: grid;
   gap: 1.5rem;
@@ -152,6 +153,16 @@ h1 {
 .membership.gold { background: #D4AF37; color: #1a1a1a; }
 .membership.silver { background: #a8a8a8; color: #1a1a1a; }
 .membership.member { background: #4CAF50; color: white; }
+
+/* FIXED: List View - Hide images */
+#directory-container.list-view .member-card img {
+  display: none;
+}
+
+#directory-container.list-view .member-card {
+  text-align: left;
+  padding: 1.5rem;
+}
 
 footer {
   background: #003087;

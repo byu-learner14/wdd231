@@ -1,14 +1,8 @@
 /* chamber-large.css */
 
 @media (min-width: 768px) {
-  .logo img {
-    width: 90px;
-    height: 90px;
-  }
-
-  .logo h2 {
-    font-size: 2rem;
-  }
+  .logo img { width: 90px; height: 90px; }
+  .logo h2 { font-size: 2rem; }
 
   #navigation ul {
     display: flex;
@@ -18,17 +12,11 @@
     background: transparent;
   }
 
-  #menu {
-    display: none;
-  }
+  #menu { display: none; }
 
-  main {
-    padding: 2rem 1rem;
-  }
+  main { padding: 2rem 1rem; }
 
-  h1 {
-    font-size: 2.5rem;
-  }
+  h1 { font-size: 2.5rem; }
 
   #directory-container.grid-view {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

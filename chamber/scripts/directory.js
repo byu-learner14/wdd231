@@ -9,7 +9,14 @@ const navigation = document.getElementById('navigation');
 // Hamburger Menu
 menuButton.addEventListener('click', () => {
   navigation.classList.toggle('show');
-  menuButton.textContent = navigation.classList.contains('show') ? '✕' : '☰';
+  
+  if (navigation.classList.contains('show')) {
+    menuButton.textContent = '✕';
+    menuButton.setAttribute('aria-expanded', 'true');
+  } else {
+    menuButton.textContent = '☰';
+    menuButton.setAttribute('aria-expanded', 'false');
+  }
 });
 
 // Fetch and display members
@@ -56,7 +63,7 @@ const displayMembers = (members) => {
     container.appendChild(card);
   });
 
-  // Fade in to reduce perceived layout shift
+  // Fade in effect
   setTimeout(() => {
     container.style.transition = 'opacity 0.4s ease';
     container.style.opacity = '1';
@@ -65,23 +72,17 @@ const displayMembers = (members) => {
 
 // View Toggle (Grid / List)
 function setView(view) {
-  if (view === 'grid') {
-    container.classList.remove('list-view');
-    container.classList.add('grid-view');
-    gridBtn.classList.add('active');
-    listBtn.classList.remove('active');
-  } else {
-    container.classList.remove('grid-view');
-    container.classList.add('list-view');
-    listBtn.classList.add('active');
-    gridBtn.classList.remove('active');
-  }
+  container.classList.remove('grid-view', 'list-view');
+  container.classList.add(view + '-view');
+  
+  gridBtn.classList.toggle('active', view === 'grid');
+  listBtn.classList.toggle('active', view === 'list');
 }
 
 gridBtn.addEventListener('click', () => setView('grid'));
 listBtn.addEventListener('click', () => setView('list'));
 
-// Footer
+// Footer info
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
 
