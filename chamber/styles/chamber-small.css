@@ -60,7 +60,7 @@ header {
   background: #003087;
 }
 
-/* FIXED: Hamburger Menu */
+/* Hamburger Menu Fix */
 #navigation.show ul {
   display: flex;
 }
@@ -69,6 +69,20 @@ header {
   color: white;
   text-decoration: none;
   padding: 0.6rem 0;
+}
+
+/* WAYFINDING - Active Link */
+#navigation a.active,
+#navigation a.active:hover {
+  color: #ffd700;           /* Gold */
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+#navigation a:hover {
+  color: #ffd700;
+  text-decoration: underline;
 }
 
 /* Main Content */
@@ -106,7 +120,7 @@ h1 {
   color: white;
 }
 
-/* Directory Cards - Grid View (Mobile) */
+/* Directory Cards - Grid View */
 #directory-container {
   display: grid;
   gap: 1.5rem;
@@ -154,7 +168,7 @@ h1 {
 .membership.silver { background: #a8a8a8; color: #1a1a1a; }
 .membership.member { background: #4CAF50; color: white; }
 
-/* FIXED: List View - Hide images */
+/* List View - Hide images */
 #directory-container.list-view .member-card img {
   display: none;
 }

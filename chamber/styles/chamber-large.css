@@ -15,7 +15,6 @@
   #menu { display: none; }
 
   main { padding: 2rem 1rem; }
-
   h1 { font-size: 2.5rem; }
 
   #directory-container.grid-view {
@@ -35,5 +34,18 @@
   .member-card img {
     max-width: 220px;
     height: 140px;
+  }
+
+  /* WAYFINDING - Active Link (Large Screen) */
+  #navigation a.active,
+  #navigation a.active:hover {
+    color: #ffd700;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+
+  #navigation a:hover {
+    color: #ffd700;
   }
 }
