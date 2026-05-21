@@ -60,7 +60,6 @@ header {
   background: #003087;
 }
 
-/* Hamburger Menu Fix */
 #navigation.show ul {
   display: flex;
 }
@@ -71,10 +70,10 @@ header {
   padding: 0.6rem 0;
 }
 
-/* WAYFINDING - Active Link */
+/* WAYFINDING */
 #navigation a.active,
 #navigation a.active:hover {
-  color: #ffd700;           /* Gold */
+  color: #ffd700;
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 6px;
@@ -120,7 +119,7 @@ h1 {
   color: white;
 }
 
-/* Directory Cards - Grid View */
+/* Directory Cards */
 #directory-container {
   display: grid;
   gap: 1.5rem;
@@ -156,19 +155,32 @@ h1 {
   margin: 0.8rem 0 0.5rem 0;
 }
 
+/* === MEMBERSHIP BADGES - Improved Contrast === */
 .membership {
   font-weight: bold;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 6px;
   margin-top: 1rem;
   display: inline-block;
+  font-size: 1rem;
 }
 
-.membership.gold { background: #D4AF37; color: #1a1a1a; }
-.membership.silver { background: #a8a8a8; color: #1a1a1a; }
-.membership.member { background: #4CAF50; color: white; }
+.membership.gold { 
+  background: #D4AF37; 
+  color: #1a1a1a; 
+}
 
-/* List View - Hide images */
+.membership.silver { 
+  background: #a8a8a8; 
+  color: #1a1a1a; 
+}
+
+.membership.member { 
+  background: #2e8b2e;     /* Darker green - passes contrast */
+  color: #ffffff; 
+}
+
+/* List View */
 #directory-container.list-view .member-card img {
   display: none;
 }

@@ -1,8 +1,14 @@
 /* chamber-large.css */
 
 @media (min-width: 768px) {
-  .logo img { width: 90px; height: 90px; }
-  .logo h2 { font-size: 2rem; }
+  .logo img { 
+    width: 90px; 
+    height: 90px; 
+  }
+
+  .logo h2 { 
+    font-size: 2rem; 
+  }
 
   #navigation ul {
     display: flex;
@@ -12,10 +18,17 @@
     background: transparent;
   }
 
-  #menu { display: none; }
+  #menu { 
+    display: none; 
+  }
 
-  main { padding: 2rem 1rem; }
-  h1 { font-size: 2.5rem; }
+  main { 
+    padding: 2rem 1rem; 
+  }
+
+  h1 { 
+    font-size: 2.5rem; 
+  }
 
   #directory-container.grid-view {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -36,7 +49,7 @@
     height: 140px;
   }
 
-  /* WAYFINDING - Active Link (Large Screen) */
+  /* WAYFINDING - Active Link */
   #navigation a.active,
   #navigation a.active:hover {
     color: #ffd700;
@@ -47,5 +60,30 @@
 
   #navigation a:hover {
     color: #ffd700;
+  }
+
+  /* Membership Badges - Same improved contrast as small.css */
+  .membership {
+    font-weight: bold;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.05rem;
+  }
+
+  .membership.gold { 
+    background: #D4AF37; 
+    color: #1a1a1a; 
+  }
+
+  .membership.silver { 
+    background: #a8a8a8; 
+    color: #1a1a1a; 
+  }
+
+  .membership.member { 
+    background: #2e8b2e;     /* Darker green for better contrast */
+    color: #ffffff; 
   }
 }
