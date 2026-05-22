@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Honolulu Chamber of Commerce</title>
+  <meta name="description" content="Welcome to the Honolulu Chamber of Commerce - Supporting local businesses and community growth in Hawaii.">
+  <meta name="author" content="Olivia Crawford">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon2.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Honolulu Chamber of Commerce - Welcome">
+  <meta property="og:description" content="Supporting businesses and community growth in Honolulu, Hawaii. Join us today!">
+  <meta property="og:image" content="https://byu-learner14.github.io/wdd231/chamber/images/og-image.jpg">
+  <meta property="og:url" content="https://byu-learner14.github.io/wdd231/chamber/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Honolulu Chamber of Commerce">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/chamber-small.css">
+  <link rel="stylesheet" href="styles/chamber-large.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <img src="images/logo.svg" alt="Honolulu Chamber of Commerce Logo" width="80" height="80">
+        <div>
+          <h2>Honolulu Chamber</h2>
+          <p>of Commerce</p>
+        </div>
+      </div>
+      <button id="menu" aria-label="Toggle Menu">☰</button>
+    </div>
+    
+    <nav id="navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="#">Join Us</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Beautiful Honolulu skyline with ocean and mountains at sunset" loading="eager">
+      <div class="hero-content">
+        <h1>Welcome to Honolulu</h1>
+        <p>Supporting local businesses and building a thriving community since 1950</p>
+        <a href="#" class="cta-button">Join the Chamber Today</a>
+      </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <div id="events-container"></div>
+    </section>
+
+    <!-- Weather -->
+    <section class="weather">
+      <h2>Current Weather in Honolulu</h2>
+      <div id="weather-container"></div>
+    </section>
+
+    <!-- Member Spotlights -->
+    <section id="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-container" class="spotlight-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Honolulu Chamber of Commerce | Olivia Crawford | WDD 231</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script defer src="scripts/index.js"></script>
+</body>
+</html>
