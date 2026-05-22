@@ -62,28 +62,20 @@
     color: #ffd700;
   }
 
-  /* Membership Badges - Same improved contrast as small.css */
-  .membership {
-    font-weight: bold;
-    padding: 0.6rem 1rem;
+/* Membership Badges - High Contrast */
+  .member-card .membership {
+    font-weight: 700;
+    padding: 0.65rem 1.1rem;
     border-radius: 6px;
     margin-top: 1rem;
     display: inline-block;
     font-size: 1.05rem;
   }
 
-  .membership.gold { 
-    background: #D4AF37; 
-    color: #1a1a1a; 
-  }
-
-  .membership.silver { 
-    background: #a8a8a8; 
-    color: #1a1a1a; 
-  }
-
-  .membership.member { 
-    background: #2e8b2e;     /* Darker green for better contrast */
+  .member-card .membership.gold { background: #D4AF37; color: #1a1a1a; }
+  .member-card .membership.silver { background: #a8a8a8; color: #1a1a1a; }
+  .member-card .membership.member { 
+    background: #1e6b1e; 
     color: #ffffff; 
   }
 }

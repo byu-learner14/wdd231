@@ -155,28 +155,28 @@ h1 {
   margin: 0.8rem 0 0.5rem 0;
 }
 
-/* === MEMBERSHIP BADGES - Improved Contrast === */
-.membership {
-  font-weight: bold;
-  padding: 0.6rem 1rem;
+/* === MEMBERSHIP BADGES - High Contrast Fix === */
+.member-card .membership {
+  font-weight: 700;
+  padding: 0.65rem 1.1rem;
   border-radius: 6px;
   margin-top: 1rem;
   display: inline-block;
   font-size: 1rem;
 }
 
-.membership.gold { 
+.member-card .membership.gold { 
   background: #D4AF37; 
   color: #1a1a1a; 
 }
 
-.membership.silver { 
+.member-card .membership.silver { 
   background: #a8a8a8; 
   color: #1a1a1a; 
 }
 
-.membership.member { 
-  background: #2e8b2e;     /* Darker green - passes contrast */
+.member-card .membership.member { 
+  background: #1e6b1e;     /* Much darker green */
   color: #ffffff; 
 }
 
