@@ -20,9 +20,12 @@ menuButton.addEventListener('click', () => {
 const weatherContainer = document.getElementById('weather-container');
 
 // Honolulu Coordinates
-const lat = 21.31;
-const lon = -157.86;
-const apiKey = "6d36cd08c88816c65796dff3e51e3867"; // Your key
+// const lat = 21.31;
+// const lon = -157.86;
+// const apiKey = "6d36cd08c88816c65796dff3e51e3867"; // Your key
+
+// === TEMPORARY TEST KEY (for debugging) ===
+const apiKey = "bd5e378503939ddaee76f12ad7a97608";
 
 const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
 
