@@ -204,7 +204,7 @@ footer {
 .hero {
   position: relative;
   height: 400px;
-  margin: 0 -1rem; /* Full width on mobile */
+  margin: 0 -1rem;
 }
 
 .hero img {
@@ -218,7 +218,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0, 48, 135, 0.85), rgba(0, 48, 135, 0.4));
+  background: linear-gradient(to top, rgba(0, 48, 135, 0.92), rgba(0, 48, 135, 0.55));
   color: white;
   padding: 2rem 1.5rem 1.5rem;
   text-align: center;
@@ -228,6 +228,7 @@ footer {
   margin: 0 0 0.5rem 0;
   font-size: 2.2rem;
   color: white;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
@@ -244,7 +245,7 @@ footer {
   text-decoration: none;
   font-weight: 700;
   font-size: 1.1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .cta-button:hover {
@@ -252,51 +253,10 @@ footer {
   transform: translateY(-3px);
 }
 
-/* Sections */
-section {
-  margin-bottom: 3rem;
-}
+/* Other sections */
+section { margin-bottom: 3rem; }
+section h2 { color: #003087; text-align: center; margin-bottom: 1.5rem; }
 
-section h2 {
-  color: #003087;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-/* Spotlight Cards */
-.spotlight-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 1fr;
-}
-
-.spotlight-card {
-  background: #ffffff;
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 1.2rem;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-}
-
-.spotlight-card img {
-  width: 100%;
-  max-width: 160px;
-  height: 110px;
-  object-fit: contain;
-  border-radius: 8px;
-  margin: 0 auto 1rem;
-  display: block;
-}
-
-/* Weather Section */
-.weather {
-  background: #f0f4f8;
-  padding: 1.5rem;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.weather h2 {
-  margin-top: 0;
-}
+/* Spotlight & Weather */
+.spotlight-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+.weather { background: #f0f4f8; padding: 1.5rem; border-radius: 10px; text-align: center; }
