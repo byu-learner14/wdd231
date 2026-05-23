@@ -22,7 +22,7 @@ const weatherContainer = document.getElementById('weather-container');
 async function getWeather() {
   const lat = 21.31;
   const lon = -157.86;
-  const apiKey = "360cfb4e7d5288c2e9af58d44d784161";   // Your key
+  const apiKey = "360cfb4e7d5288c2e9af58d44d784161";
 
 // === TEMPORARY TEST KEY (for debugging) ===
 // const apiKey = "bd5e378503939ddaee76f12ad7a97608";
@@ -37,11 +37,11 @@ async function getWeather() {
     const data = await response.json();
 
     weatherContainer.innerHTML = `
-      <div style="display: flex; align-items: center; justify-content: center; gap: 1.2rem; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
         <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" 
              alt="${data.weather[0].description}" style="width: 85px;">
         <div>
-          <p style="font-size: 2.3rem; margin: 0; font-weight: 700;">${Math.round(data.main.temp)}°F</p>
+          <p style="font-size: 2rem; margin: 0; font-weight: 700; color: #003087;">${Math.round(data.main.temp)}°F</p>
           <p style="margin: 0.4rem 0 0 0; text-transform: capitalize; font-size: 1.1rem;">
             ${data.weather[0].description}
           </p>
