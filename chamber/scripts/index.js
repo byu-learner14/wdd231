@@ -1,76 +1,109 @@
+// ====================== CHAMBER HOME PAGE - index.js ======================
+
 // Hamburger Menu
 const menuButton = document.getElementById('menu');
 const navigation = document.getElementById('navigation');
 
 menuButton.addEventListener('click', () => {
   navigation.classList.toggle('show');
-  menuButton.textContent = navigation.classList.contains('show') ? '✕' : '☰';
-  menuButton.setAttribute('aria-expanded', navigation.classList.contains('show'));
+  
+  if (navigation.classList.contains('show')) {
+    menuButton.textContent = '✕';
+    menuButton.setAttribute('aria-expanded', 'true');
+  } else {
+    menuButton.textContent = '☰';
+    menuButton.setAttribute('aria-expanded', 'false');
+  }
 });
 
-// Weather
+// ====================== WEATHER ======================
 const weatherContainer = document.getElementById('weather-container');
-const lat = 21.31;
-const lon = -157.86;
-const apiKey = "360cfb4e7d5288c2e9af58d44d784161";
+
+async function getWeather() {
+  const lat = 21.31;
+  const lon = -157.86;
+  const apiKey = "360cfb4e7d5288c2e9af58d44d784161";   // Your key
 
 // === TEMPORARY TEST KEY (for debugging) ===
 // const apiKey = "bd5e378503939ddaee76f12ad7a97608";
 
-async function getWeather() {
   try {
-    const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`);
-    if (!res.ok) throw new Error();
-    const data = await res.json();
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`
+    );
+
+    if (!response.ok) throw new Error("Weather unavailable");
+
+    const data = await response.json();
 
     weatherContainer.innerHTML = `
-      <div style="display:flex; align-items:center; justify-content:center; gap:1rem; flex-wrap:wrap;">
-        <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="${data.weather[0].description}" style="width:90px;">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 1.2rem; flex-wrap: wrap;">
+        <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" 
+             alt="${data.weather[0].description}" style="width: 85px;">
         <div>
-          <p style="font-size:2.2rem; margin:0; font-weight:700;">${Math.round(data.main.temp)}°F</p>
-          <p style="margin:0.3rem 0 0 0; text-transform:capitalize;">${data.weather[0].description}</p>
+          <p style="font-size: 2.3rem; margin: 0; font-weight: 700;">${Math.round(data.main.temp)}°F</p>
+          <p style="margin: 0.4rem 0 0 0; text-transform: capitalize; font-size: 1.1rem;">
+            ${data.weather[0].description}
+          </p>
         </div>
       </div>
     `;
-  } catch {
-    weatherContainer.innerHTML = `<p>Weather data temporarily unavailable.</p>`;
+  } catch (error) {
+    console.error(error);
+    weatherContainer.innerHTML = `<p>Weather information is temporarily unavailable.</p>`;
   }
 }
 
-// Spotlights
+// ====================== MEMBER SPOTLIGHTS ======================
 const spotlightContainer = document.getElementById('spotlight-container');
 
 async function getSpotlights() {
   try {
-    const res = await fetch('data/members.json');
-    const data = await res.json();
-    let members = data.members.filter(m => m.membership === "Gold" || m.membership === "Silver");
+    const response = await fetch('data/members.json');
+    const data = await response.json();
     
-    const selected = members.sort(() => 0.5 - Math.random()).slice(0, 3);
+    // Filter Gold and Silver members only
+    let premium = data.members.filter(m => 
+      m.membership === "Gold" || m.membership === "Silver"
+    );
+
+    // Randomly select 2 or 3
+    const shuffled = premium.sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, 3);
 
     spotlightContainer.innerHTML = '';
+
     selected.forEach(member => {
       const card = document.createElement('section');
       card.classList.add('spotlight-card');
+
       card.innerHTML = `
-        <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
+        <img src="images/${member.image}" 
+             alt="${member.name} business logo" 
+             loading="lazy"
+             width="300" height="200">
         <h3>${member.name}</h3>
         <p>${member.address}</p>
         <p><strong>Phone:</strong> ${member.phone}</p>
-        <p><a href="${member.website}" target="_blank">Visit Website →</a></p>
-        <p class="membership ${member.membership.toLowerCase()}"><strong>${member.membership} Member</strong></p>
+        <p><a href="${member.website}" target="_blank" rel="noopener">Visit Website →</a></p>
+        <p class="membership ${member.membership.toLowerCase()}">
+          <strong>${member.membership} Member</strong>
+        </p>
       `;
+
       spotlightContainer.appendChild(card);
     });
-  } catch (e) {
-    spotlightContainer.innerHTML = `<p>Spotlights temporarily unavailable.</p>`;
+
+  } catch (error) {
+    console.error('Spotlights error:', error);
+    spotlightContainer.innerHTML = `<p>Member spotlights are temporarily unavailable.</p>`;
   }
 }
 
-// Footer
+// ====================== FOOTER ======================
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
 
-// Initialize
+// ====================== INITIALIZE ======================
 getWeather();
 getSpotlights();

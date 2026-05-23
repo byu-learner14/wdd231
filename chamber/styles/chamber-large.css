@@ -1,14 +1,8 @@
 /* chamber-large.css */
 
 @media (min-width: 768px) {
-  .logo img { 
-    width: 90px; 
-    height: 90px; 
-  }
-
-  .logo h2 { 
-    font-size: 2rem; 
-  }
+  .logo img { width: 90px; height: 90px; }
+  .logo h2 { font-size: 2rem; }
 
   #navigation ul {
     display: flex;
@@ -18,19 +12,13 @@
     background: transparent;
   }
 
-  #menu { 
-    display: none; 
-  }
+  #menu { display: none; }
 
-  main { 
-    padding: 2rem 1rem; 
-  }
+  main { padding: 2rem 1rem; }
+  h1 { font-size: 2.5rem; }
 
-  h1 { 
-    font-size: 2.5rem; 
-  }
-
-  #directory-container.grid-view {
+  #directory-container.grid-view,
+  .spotlight-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
@@ -38,18 +26,20 @@
     grid-template-columns: 1fr;
   }
 
-  .member-card {
+  .member-card,
+  .spotlight-card {
     min-height: 420px;
     text-align: left;
     padding: 1.8rem;
   }
 
-  .member-card img {
+  .member-card img,
+  .spotlight-card img {
     max-width: 220px;
     height: 140px;
   }
 
-  /* WAYFINDING - Active Link */
+  /* WAYFINDING */
   #navigation a.active,
   #navigation a.active:hover {
     color: #ffd700;
@@ -62,46 +52,21 @@
     color: #ffd700;
   }
 
-/* Membership Badges - High Contrast */
-  .member-card .membership {
-    font-weight: 700;
-    padding: 0.65rem 1.1rem;
-    border-radius: 6px;
-    margin-top: 1rem;
-    display: inline-block;
-    font-size: 1.05rem;
-  }
-
-  .member-card .membership.gold { background: #D4AF37; color: #1a1a1a; }
-  .member-card .membership.silver { background: #a8a8a8; color: #1a1a1a; }
-  .member-card .membership.member { 
-    background: #1e6b1e; 
-    color: #ffffff; 
-  }
-}
-
-/* ====================== HOME PAGE - LARGE SCREENS ====================== */
-
-@media (min-width: 768px) {
+  /* Hero - Large Screens */
   .hero {
-    height: 500px;
+    height: 520px;
     margin: 0;
     border-radius: 12px;
-    overflow: hidden;
   }
 
   .hero-content {
-    padding: 3rem 2rem;
+    padding: 3.5rem 3rem 3rem;
     text-align: left;
-    background: linear-gradient(to top, rgba(0, 48, 135, 0.9), transparent);
+    background: linear-gradient(to top, rgba(0, 48, 135, 0.95), rgba(0, 48, 135, 0.6));
   }
 
   .hero h1 {
-    font-size: 3rem;
-  }
-
-  .spotlight-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    font-size: 3.2rem;
   }
 
   .weather {
