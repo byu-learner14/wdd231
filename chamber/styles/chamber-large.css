@@ -54,7 +54,7 @@
 
   /* Hero - Large Screens */
   .hero {
-    height: 520px;
+    height: 550px;
     margin: 0;
     border-radius: 12px;
   }
@@ -62,11 +62,11 @@
   .hero-content {
     padding: 4rem 3rem 3.5rem;
     text-align: left;
-    background: linear-gradient(to top, rgba(0, 48, 135, 0.97), rgba(0, 48, 135, 0.8));
+    background: rgba(0, 48, 135, 0.96);
   }
 
   .hero h1 {
-    font-size: 3.4rem;
+    font-size: 3.5rem;
   }
 
   .weather {
