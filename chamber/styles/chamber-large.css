@@ -60,13 +60,13 @@
   }
 
   .hero-content {
-    padding: 3.5rem 3rem 3rem;
+    padding: 4rem 3rem 3.5rem;
     text-align: left;
-    background: linear-gradient(to top, rgba(0, 48, 135, 0.95), rgba(0, 48, 135, 0.6));
+    background: linear-gradient(to top, rgba(0, 48, 135, 0.97), rgba(0, 48, 135, 0.8));
   }
 
   .hero h1 {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
   }
 
   .weather {
