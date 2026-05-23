@@ -40,8 +40,9 @@ async function getWeather() {
       <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
         <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" 
              alt="${data.weather[0].description}" style="width: 85px;">
+        
         <div>
-          <p style="font-size: 2rem; margin: 0; font-weight: 700; color: #003087;">${Math.round(data.main.temp)}°F</p>
+          <span class="temperature">${Math.round(data.main.temp)}°F</span>
           <p style="margin: 0.4rem 0 0 0; text-transform: capitalize; font-size: 1.1rem;">
             ${data.weather[0].description}
           </p>
