@@ -51,11 +51,57 @@
   footer {
     padding: 2.5rem;
   }
+
+  /* ====================== MODAL DIALOG - LARGE SCREENS ====================== */
+  dialog {
+    max-width: 550px;
+    padding: 2.5rem;
+  }
+
+  #closeModal {
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: 520px;
+    margin: 0;
+    border-radius: 12px;
+  }
+
+  .hero-content {
+    padding: 4rem 3rem 3.5rem;
+    text-align: left;
+    background: rgba(0, 48, 135, 0.96);
+  }
+
+  .hero h1 {
+    font-size: 3.4rem;
+  }
+
+  /* Weather & Spotlights */
+  .weather {
+    padding: 2rem;
+  }
+
+  .spotlight-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }
 
 /* Extra large screens */
 @media (min-width: 1024px) {
   main {
     padding: 2rem 4rem;
+  }
+
+  .hero {
+    height: 580px;
+  }
+
+  .hero h1 {
+    font-size: 3.8rem;
   }
 }
