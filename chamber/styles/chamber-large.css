@@ -17,3 +17,14 @@
     padding: 2.5rem 3rem;
   }
 }
+
+/* Join Page - Large Screens */
+@media (min-width: 768px) {
+  form {
+    padding: 2.5rem;
+  }
+
+  .membership-cards {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}

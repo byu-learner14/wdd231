@@ -135,3 +135,57 @@ dialog::backdrop {
   border: none;
   cursor: pointer;
 }
+
+/* ====================== JOIN PAGE ====================== */
+
+form {
+  background: #f8f9fa;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+fieldset {
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+legend {
+  font-weight: 700;
+  color: #003087;
+  padding: 0 12px;
+}
+
+.required {
+  color: #d32f2f;
+}
+
+.membership-cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+.membership-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.8rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.membership-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join | Honolulu Chamber of Commerce</title>
-  <meta name="description" content="Apply to become a member of the Honolulu Chamber of Commerce.">
+  <meta name="description" content="Apply to become a member of the Honolulu Chamber of Commerce and join Hawaii's leading business network.">
   <meta name="author" content="Olivia Crawford">
 
   <!-- Favicon -->
@@ -14,6 +14,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Join the Honolulu Chamber of Commerce">
+  <meta property="og:description" content="Apply today to become a member and connect with Hawaii's vibrant business community.">
+  <meta property="og:image" content="https://byu-learner14.github.io/wdd231/chamber/images/og-image.jpg">
+  <meta property="og:url" content="https://byu-learner14.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Honolulu Chamber of Commerce">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/chamber-normalize.css">
@@ -51,41 +59,37 @@
 
     <form id="membership-form" action="thankyou.html" method="get">
       
-      <!-- Personal Information -->
       <fieldset>
         <legend>Personal Information</legend>
         <label for="fname">First Name <span class="required">*</span></label>
-        <input type="text" id="fname" name="fname" required autocomplete="given-name">
+        <input type="text" id="fname" name="fname" required autocomplete="given-name" title="Enter your first name">
 
         <label for="lname">Last Name <span class="required">*</span></label>
-        <input type="text" id="lname" name="lname" required autocomplete="family-name">
+        <input type="text" id="lname" name="lname" required autocomplete="family-name" title="Enter your last name">
 
         <label for="title">Organizational Title</label>
         <input type="text" id="title" name="title" autocomplete="organization-title" 
                pattern="[A-Za-z\s-]{7,}" title="Minimum 7 characters (letters, spaces, hyphens)">
       </fieldset>
 
-      <!-- Contact Information -->
       <fieldset>
         <legend>Contact Information</legend>
         <label for="email">Email Address <span class="required">*</span></label>
-        <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@business.com">
+        <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@business.com" title="Enter your email address">
 
         <label for="phone">Mobile Phone <span class="required">*</span></label>
-        <input type="tel" id="phone" name="phone" required autocomplete="tel">
+        <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Enter your mobile phone number">
       </fieldset>
 
-      <!-- Business Information -->
       <fieldset>
         <legend>Business / Organization</legend>
         <label for="business">Business Name <span class="required">*</span></label>
-        <input type="text" id="business" name="business" required autocomplete="organization">
+        <input type="text" id="business" name="business" required autocomplete="organization" title="Enter your business or organization name">
 
         <label for="description">Business Description</label>
-        <textarea id="description" name="description" rows="4" placeholder="Briefly describe your business..."></textarea>
+        <textarea id="description" name="description" rows="4" title="Briefly describe your business or organization"></textarea>
       </fieldset>
 
-      <!-- Membership Level -->
       <fieldset>
         <legend>Membership Level <span class="required">*</span></legend>
         <label><input type="radio" name="membership" value="np" required> NP Membership (Non-Profit - $0)</label><br><br>
@@ -94,7 +98,6 @@
         <label><input type="radio" name="membership" value="gold"> Gold Membership</label>
       </fieldset>
 
-      <!-- Hidden Timestamp -->
       <input type="hidden" id="timestamp" name="timestamp">
 
       <button type="submit">Submit Application</button>

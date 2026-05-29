@@ -1,6 +1,6 @@
 // join.js
 
-// ====================== HAMBURGER MENU ======================
+// Hamburger Menu
 const menuButton = document.getElementById('menu');
 const navigation = document.getElementById('navigation');
 
@@ -16,98 +16,49 @@ menuButton.addEventListener('click', () => {
   }
 });
 
-// ====================== TIMESTAMP ======================
+// Timestamp for hidden field
 function setTimestamp() {
   const timestampField = document.getElementById('timestamp');
   if (timestampField) {
-    const now = new Date();
-    timestampField.value = now.toISOString();
+    timestampField.value = new Date().toISOString();
   }
 }
 
-// ====================== MEMBERSHIP MODALS ======================
+// Membership Modals
 function setupModals() {
   const modal = document.getElementById('membership-modal');
   const modalTitle = document.getElementById('modal-title');
   const modalContent = document.getElementById('modal-content');
   const closeModalBtn = document.getElementById('close-modal');
 
-  // Close button
-  closeModalBtn.addEventListener('click', () => {
-    modal.close();
-  });
+  closeModalBtn.addEventListener('click', () => modal.close());
 
-  // Close when clicking outside the modal
   modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.close();
-    }
+    if (e.target === modal) modal.close();
   });
 
-  // Add click listeners to membership cards
   document.querySelectorAll('.membership-card').forEach(card => {
     card.addEventListener('click', () => {
       const level = card.getAttribute('data-level');
-      
       let title = '';
       let content = '';
 
       switch(level) {
         case 'np':
           title = 'NP Membership (Non-Profit)';
-          content = `
-            <p><strong>Annual Fee:</strong> $0</p>
-            <p>Designed for non-profit organizations that want to connect with the business community.</p>
-            <ul>
-              <li>Networking opportunities</li>
-              <li>Access to member directory</li>
-              <li>Monthly newsletter</li>
-              <li>Community recognition</li>
-            </ul>
-          `;
+          content = `<p><strong>Fee:</strong> $0/year</p><p>For non-profit organizations.</p>`;
           break;
-
         case 'bronze':
           title = 'Bronze Membership';
-          content = `
-            <p><strong>Annual Fee:</strong> $150</p>
-            <p>Perfect entry-level membership for small businesses.</p>
-            <ul>
-              <li>All NP benefits</li>
-              <li>Business spotlight (1x per year)</li>
-              <li>Event discounts</li>
-              <li>Member directory listing</li>
-            </ul>
-          `;
+          content = `<p><strong>Fee:</strong> $150/year</p><p>Entry level for small businesses.</p>`;
           break;
-
         case 'silver':
           title = 'Silver Membership';
-          content = `
-            <p><strong>Annual Fee:</strong> $300</p>
-            <p>Popular choice for growing businesses.</p>
-            <ul>
-              <li>All Bronze benefits</li>
-              <li>Featured in newsletter</li>
-              <li>2x business spotlights per year</li>
-              <li>Priority event registration</li>
-            </ul>
-          `;
+          content = `<p><strong>Fee:</strong> $300/year</p><p>For growing businesses.</p>`;
           break;
-
         case 'gold':
           title = 'Gold Membership';
-          content = `
-            <p><strong>Annual Fee:</strong> $600</p>
-            <p>Premium membership for established organizations.</p>
-            <ul>
-              <li>All Silver benefits</li>
-              <li>Homepage spotlight rotation</li>
-              <li>Exclusive networking events</li>
-              <li>Marketing and promotion support</li>
-              <li>Board nomination eligibility</li>
-            </ul>
-          `;
+          content = `<p><strong>Fee:</strong> $600/year</p><p>Premium membership.</p>`;
           break;
       }
 
@@ -118,11 +69,7 @@ function setupModals() {
   });
 }
 
-// ====================== FOOTER ======================
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
-
-// ====================== INITIALIZE ======================
+// Initialize
 document.addEventListener('DOMContentLoaded', () => {
   setTimestamp();
   setupModals();
