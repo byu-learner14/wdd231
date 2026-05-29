@@ -1,0 +1,137 @@
+/* ====================== JOIN PAGE STYLES - SMALL SCREENS ====================== */
+
+/* Form Styling */
+form {
+  background: #f8f9fa;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+fieldset {
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+legend {
+  font-weight: 700;
+  color: #003087;
+  padding: 0 12px;
+}
+
+label {
+  display: block;
+  margin: 1.2rem 0 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.required {
+  color: #e63939;
+}
+
+button[type="submit"] {
+  background: #003087;
+  color: white;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background: #002266;
+}
+
+/* Membership Level Cards */
+.membership-cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+}
+
+.membership-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.membership-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  border-color: #003087;
+}
+
+.membership-card h3 {
+  color: #003087;
+  margin: 0.8rem 0;
+}
+
+.membership-card .price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e6b1e;
+  margin: 0.5rem 0;
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal */
+dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#closeModal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
