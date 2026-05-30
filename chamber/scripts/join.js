@@ -1,6 +1,6 @@
 // join.js
 
-// Hamburger Menu
+// ====================== HAMBURGER MENU ======================
 const menuButton = document.getElementById('menu');
 const navigation = document.getElementById('navigation');
 
@@ -16,60 +16,105 @@ menuButton.addEventListener('click', () => {
   }
 });
 
-// Timestamp for hidden field
+// ====================== TIMESTAMP ======================
 function setTimestamp() {
   const timestampField = document.getElementById('timestamp');
   if (timestampField) {
-    timestampField.value = new Date().toISOString();
+    const now = new Date();
+    timestampField.value = now.toISOString();
   }
 }
 
-// Membership Modals
+// ====================== MEMBERSHIP MODALS ======================
 function setupModals() {
   const modal = document.getElementById('membership-modal');
   const modalTitle = document.getElementById('modal-title');
   const modalContent = document.getElementById('modal-content');
   const closeModalBtn = document.getElementById('close-modal');
 
-  closeModalBtn.addEventListener('click', () => modal.close());
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) modal.close();
+  // Close button
+  closeModalBtn.addEventListener('click', () => {
+    modal.close();
   });
 
+  // Close when clicking outside the modal
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.close();
+    }
+  });
+
+  // Open modal when clicking a membership card
   document.querySelectorAll('.membership-card').forEach(card => {
     card.addEventListener('click', () => {
       const level = card.getAttribute('data-level');
+      
       let title = '';
       let content = '';
 
       switch(level) {
         case 'np':
           title = 'NP Membership (Non-Profit)';
-          content = `<p><strong>Fee:</strong> $0/year</p><p>For non-profit organizations.</p>`;
+          content = `
+            <p><strong>Annual Fee:</strong> $0</p>
+            <p>Designed for non-profit organizations.</p>
+            <ul>
+              <li>Networking opportunities</li>
+              <li>Access to member directory</li>
+              <li>Monthly newsletter</li>
+            </ul>
+          `;
           break;
         case 'bronze':
           title = 'Bronze Membership';
-          content = `<p><strong>Fee:</strong> $150/year</p><p>Entry level for small businesses.</p>`;
+          content = `
+            <p><strong>Annual Fee:</strong> $150</p>
+            <p>Great entry-level membership for small businesses.</p>
+            <ul>
+              <li>All NP benefits</li>
+              <li>Business spotlight (1x/year)</li>
+              <li>Event discounts</li>
+            </ul>
+          `;
           break;
         case 'silver':
           title = 'Silver Membership';
-          content = `<p><strong>Fee:</strong> $300/year</p><p>For growing businesses.</p>`;
+          content = `
+            <p><strong>Annual Fee:</strong> $300</p>
+            <p>Popular choice for growing businesses.</p>
+            <ul>
+              <li>All Bronze benefits</li>
+              <li>Featured in newsletter</li>
+              <li>2x business spotlights per year</li>
+            </ul>
+          `;
           break;
         case 'gold':
           title = 'Gold Membership';
-          content = `<p><strong>Fee:</strong> $600/year</p><p>Premium membership.</p>`;
+          content = `
+            <p><strong>Annual Fee:</strong> $600</p>
+            <p>Premium membership for established businesses.</p>
+            <ul>
+              <li>All Silver benefits</li>
+              <li>Homepage spotlight rotation</li>
+              <li>Exclusive networking events</li>
+            </ul>
+          `;
           break;
       }
 
-      modalTitle.textContent = title;
+      modalTitle.textContent = title;   // Always set title first
       modalContent.innerHTML = content;
       modal.showModal();
     });
   });
 }
 
-// Initialize
+// ====================== FOOTER ======================
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = document.lastModified;
+
+// ====================== INITIALIZE ======================
 document.addEventListener('DOMContentLoaded', () => {
   setTimestamp();
   setupModals();
