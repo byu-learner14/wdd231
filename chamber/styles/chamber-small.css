@@ -1,12 +1,108 @@
-/* ====================== JOIN PAGE STYLES - SMALL SCREENS ====================== */
+/* chamber-small.css - Mobile First + Optimized for Lighthouse */
 
-/* Form Styling */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  background-color: #003087;
+  color: white;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Hamburger Menu */
+#menu {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Navigation */
+#navigation ul {
+  display: none;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem;
+  margin: 0;
+  list-style: none;
+  background: #003087;
+}
+
+#navigation.show ul {
+  display: flex;
+}
+
+#navigation a {
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 0;
+}
+
+/* Wayfinding */
+#navigation a.active,
+#navigation a.active:hover {
+  color: #ffd700;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+#navigation a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: #003087;
+  margin-bottom: 1.5rem;
+}
+
+/* ====================== JOIN PAGE FORM ====================== */
 form {
   background: #f8f9fa;
   padding: 2rem 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 3rem;
 }
 
 fieldset {
@@ -26,13 +122,15 @@ label {
   display: block;
   margin: 1.2rem 0 0.5rem;
   font-weight: 600;
-  color: #333;
+}
+
+.required {
+  color: #d32f2f;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-input[type="date"],
 select,
 textarea {
   width: 100%;
@@ -40,11 +138,6 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.required {
-  color: #e63939;
 }
 
 button[type="submit"] {
@@ -56,7 +149,6 @@ button[type="submit"] {
   font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
-  margin-top: 1rem;
   width: 100%;
 }
 
@@ -64,7 +156,7 @@ button[type="submit"]:hover {
   background: #002266;
 }
 
-/* Membership Level Cards */
+/* Membership Cards */
 .membership-cards {
   display: grid;
   gap: 1.5rem;
@@ -76,116 +168,28 @@ button[type="submit"]:hover {
   background: white;
   border: 2px solid #e0e0e0;
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.8rem;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
   transition: all 0.4s ease;
   animation: fadeInUp 0.8s ease forwards;
 }
 
 .membership-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-  border-color: #003087;
-}
-
-.membership-card h3 {
-  color: #003087;
-  margin: 0.8rem 0;
-}
-
-.membership-card .price {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #1e6b1e;
-  margin: 0.5rem 0;
-}
-
-/* Animation for cards */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Modal */
-dialog {
-  border: none;
-  border-radius: 12px;
-  padding: 2rem;
-  max-width: 500px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-#closeModal {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* ====================== JOIN PAGE ====================== */
-
-form {
-  background: #f8f9fa;
-  padding: 2rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-fieldset {
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-legend {
-  font-weight: 700;
-  color: #003087;
-  padding: 0 12px;
-}
-
-.required {
-  color: #d32f2f;
-}
-
-.membership-cards {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 1fr;
-}
-
-.membership-card {
-  background: white;
-  border: 2px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 1.8rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  cursor: pointer;
-  transition: all 0.4s ease;
-  animation: fadeInUp 0.6s ease forwards;
-}
-
-.membership-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  background: #003087;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
 }
