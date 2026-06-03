@@ -58,8 +58,6 @@
     <p>Become part of Hawaii’s leading business community.</p>
 
     <form id="membership-form" action="thankyou.html" method="get">
-      
-      <!-- Personal Information -->
       <fieldset>
         <legend>Personal Information</legend>
         <label for="fname">First Name <span class="required">*</span></label>
@@ -69,11 +67,9 @@
         <input type="text" id="lname" name="lname" required autocomplete="family-name" title="Enter your last name">
 
         <label for="title">Organizational Title</label>
-        <input type="text" id="title" name="title" autocomplete="organization-title" 
-               pattern="[A-Za-z\s-]{7,}" title="Minimum 7 characters (letters, spaces, hyphens)">
+        <input type="text" id="title" name="title" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" title="Minimum 7 characters (letters, spaces, hyphens)">
       </fieldset>
 
-      <!-- Contact Information -->
       <fieldset>
         <legend>Contact Information</legend>
         <label for="email">Email Address <span class="required">*</span></label>
@@ -83,7 +79,6 @@
         <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Enter your mobile phone number">
       </fieldset>
 
-      <!-- Business Information -->
       <fieldset>
         <legend>Business / Organization</legend>
         <label for="business">Business Name <span class="required">*</span></label>
@@ -93,7 +88,6 @@
         <textarea id="description" name="description" rows="4" title="Briefly describe your business or organization"></textarea>
       </fieldset>
 
-      <!-- Membership Level -->
       <fieldset>
         <legend>Membership Level <span class="required">*</span></legend>
         <label><input type="radio" name="membership" value="np" required> NP Membership (Non-Profit - $0)</label><br><br>
@@ -102,7 +96,6 @@
         <label><input type="radio" name="membership" value="gold"> Gold Membership</label>
       </fieldset>
 
-      <!-- Hidden Timestamp -->
       <input type="hidden" id="timestamp" name="timestamp">
 
       <button type="submit">Submit Application</button>
