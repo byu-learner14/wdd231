@@ -216,36 +216,16 @@ footer {
   margin: 2rem 0;
 }
 
-/* Small screens: Stacked layout with named areas */
+/* Small screens - Stacked with named grid areas */
 .discover-grid {
   grid-template-areas:
-    "card1"
-    "card2"
-    "card3"
-    "card4"
-    "card5"
-    "card6"
-    "card7"
-    "card8";
+    "card1" "card2" "card3" "card4"
+    "card5" "card6" "card7" "card8";
   grid-template-columns: 1fr;
 }
 
-.discover-card { 
-  grid-area: auto; 
-}
-
-/* Assign specific areas */
-.discover-card:nth-child(1) { grid-area: card1; }
-.discover-card:nth-child(2) { grid-area: card2; }
-.discover-card:nth-child(3) { grid-area: card3; }
-.discover-card:nth-child(4) { grid-area: card4; }
-.discover-card:nth-child(5) { grid-area: card5; }
-.discover-card:nth-child(6) { grid-area: card6; }
-.discover-card:nth-child(7) { grid-area: card7; }
-.discover-card:nth-child(8) { grid-area: card8; }
-
-/* Card styling */
 .discover-card {
+  grid-area: auto;
   background: white;
   border-radius: 12px;
   overflow: hidden;
@@ -255,7 +235,6 @@ footer {
 
 .discover-card figure {
   margin: 0;
-  padding: 0;
 }
 
 .discover-card img {
@@ -265,8 +244,11 @@ footer {
   transition: transform 0.4s ease;
 }
 
-.discover-card:hover img {
-  transform: scale(1.08);   /* Hover effect - only on larger screens */
+/* Hover effect - only on larger screens */
+@media (min-width: 768px) {
+  .discover-card:hover img {
+    transform: scale(1.08);
+  }
 }
 
 .discover-card h3 {
@@ -294,4 +276,16 @@ footer {
   border: none;
   border-radius: 50px;
   cursor: pointer;
+  font-weight: 600;
 }
+
+/* ====================== NAMED GRID AREAS - MEDIUM & LARGE ====================== */
+
+.discover-card:nth-child(1) { grid-area: card1; }
+.discover-card:nth-child(2) { grid-area: card2; }
+.discover-card:nth-child(3) { grid-area: card3; }
+.discover-card:nth-child(4) { grid-area: card4; }
+.discover-card:nth-child(5) { grid-area: card5; }
+.discover-card:nth-child(6) { grid-area: card6; }
+.discover-card:nth-child(7) { grid-area: card7; }
+.discover-card:nth-child(8) { grid-area: card8; }
