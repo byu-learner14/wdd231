@@ -216,7 +216,7 @@ button[type="submit"] {
   font-weight: 600;
 }
 
-/* Named Grid Areas for Small Screens */
+/* Named Grid Areas */
 .discover-card:nth-child(1) { grid-area: card1; }
 .discover-card:nth-child(2) { grid-area: card2; }
 .discover-card:nth-child(3) { grid-area: card3; }
