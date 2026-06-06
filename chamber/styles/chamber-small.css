@@ -208,16 +208,12 @@ footer {
   margin-top: 3rem;
 }
 
-/* ====================== DISCOVER PAGE GRID ====================== */
+/* ====================== DISCOVER PAGE ====================== */
 
 .discover-grid {
   display: grid;
   gap: 1.5rem;
   margin: 2rem 0;
-}
-
-/* Small screens */
-.discover-grid {
   grid-template-areas:
     "card1" "card2" "card3" "card4"
     "card5" "card6" "card7" "card8";
@@ -235,7 +231,7 @@ footer {
 
 .discover-card figure {
   margin: 0;
-  height: 200px;           /* Fixed height to reduce CLS */
+  height: 200px;
   overflow: hidden;
 }
 
@@ -270,6 +266,7 @@ footer {
   border: none;
   border-radius: 50px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 /* Named Grid Areas */
