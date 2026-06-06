@@ -17,11 +17,6 @@
   main { padding: 2rem 1rem; }
   h1 { font-size: 2.5rem; }
 
-  form { padding: 2.5rem; }
-
-  button[type="submit"] { width: auto; }
-
-  /* Discover Grid - Medium */
   .discover-grid {
     grid-template-areas:
       "card1 card2 card3"
@@ -32,7 +27,6 @@
 }
 
 @media (min-width: 1025px) {
-  /* Discover Grid - Large */
   .discover-grid {
     grid-template-areas:
       "card1 card2 card3 card4"
