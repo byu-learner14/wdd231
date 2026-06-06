@@ -42,6 +42,7 @@ function showVisitMessage() {
 // ====================== BUILD DISCOVER CARDS ======================
 function buildDiscoverCards() {
   const container = document.getElementById('discover-grid');
+  container.innerHTML = '';
 
   discoverData.items.forEach(item => {
     const card = document.createElement('div');
@@ -50,12 +51,12 @@ function buildDiscoverCards() {
     card.innerHTML = `
       <figure>
         <img src="${item.image}" 
-             alt="${item.name}" 
+             alt="Photo of ${item.name} in Honolulu, Hawaii" 
              loading="lazy"
              width="300" 
              height="200">
       </figure>
-      <h3>${item.name}</h3>
+      <h2>${item.name}</h2>
       <address>${item.address}</address>
       <p>${item.description}</p>
       <button class="learn-more">Learn More</button>
