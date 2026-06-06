@@ -27,3 +27,27 @@
     width: auto;
   }
 }
+
+@media (min-width: 768px) {
+  /* Medium + Large: More interesting named grid layout */
+  .discover-grid {
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 card5 card6"
+      "card7 card8 card8";
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .discover-card:nth-child(8) {
+    grid-area: card8;
+  }
+}
+
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

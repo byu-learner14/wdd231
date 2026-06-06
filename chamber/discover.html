@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Directory | Honolulu Chamber of Commerce</title>
-  <meta name="description" content="Discover trusted local businesses and member organizations in Honolulu, Hawaii.">
+  <title>Discover | Honolulu Chamber of Commerce</title>
+  <meta name="description" content="Discover the beauty, culture, and opportunities in Honolulu, Hawaii.">
   <meta name="author" content="Olivia Crawford">
 
   <!-- Favicon -->
@@ -16,18 +16,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Honolulu Chamber of Commerce - Member Directory">
-  <meta property="og:description" content="Discover trusted local businesses and member organizations in Honolulu, Hawaii. Join our vibrant business community.">
+  <meta property="og:title" content="Discover Honolulu - Chamber of Commerce">
+  <meta property="og:description" content="Explore the best attractions, landmarks, and experiences Honolulu has to offer.">
   <meta property="og:image" content="https://byu-learner14.github.io/wdd231/chamber/images/og-image.jpg">
-  <meta property="og:url" content="https://byu-learner14.github.io/wdd231/chamber/directory.html">
+  <meta property="og:url" content="https://byu-learner14.github.io/wdd231/chamber/discover.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Honolulu Chamber of Commerce">
-  <meta property="og:locale" content="en_US">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="styles/chamber-normalize.css">
-  <link rel="stylesheet" href="styles/chamber-small-old.css">
-  <link rel="stylesheet" href="styles/chamber-large-old.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/chamber-small.css">
+  <link rel="stylesheet" href="styles/chamber-large.css">
 </head>
 
 <body>
@@ -46,30 +45,27 @@
     <nav id="navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
-        <li><a href="discover.html">Discover</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
         <li><a href="#">About</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Member Directory</h1>
-    
-    <div class="view-controls">
-      <button id="grid-btn" class="active">Grid View</button>
-      <button id="list-btn">List View</button>
-    </div>
+    <h1>Discover Honolulu</h1>
+    <p>Explore the beauty, culture, and opportunities in our vibrant island city.</p>
 
-    <div id="directory-container"></div>
+    <div id="discover-grid" class="discover-grid"></div>
   </main>
 
   <footer>
     <p>&copy; <span id="year"></span> Honolulu Chamber of Commerce | Olivia Crawford | WDD 231</p>
     <p>Last Modified: <span id="lastModified"></span></p>
+    <p id="visit-message"></p>
   </footer>
 
-  <script defer src="scripts/directory.js"></script>
+  <script type="module" src="scripts/discover.js"></script>
 </body>
 </html>
