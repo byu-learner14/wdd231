@@ -1,4 +1,4 @@
-/* chamber-small.css - Mobile First + Optimized for Lighthouse */
+/* chamber-small.css - Mobile First + Optimized */
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
@@ -97,7 +97,7 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-/* ====================== JOIN PAGE FORM ====================== */
+/* Form Styles (from join page) */
 form {
   background: #f8f9fa;
   padding: 2rem 1.5rem;
@@ -128,7 +128,6 @@ label {
   color: #d32f2f;
 }
 
-/* FIXED: Input overflow prevention */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -141,16 +140,6 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
-}
-
-@media (max-width: 480px) {
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  select,
-  textarea {
-    font-size: 16px; /* Prevents zoom on iOS */
-  }
 }
 
 button[type="submit"] {
@@ -166,50 +155,7 @@ button[type="submit"] {
   margin-top: 1.5rem;
 }
 
-button[type="submit"]:hover {
-  background: #002266;
-}
-
-/* Membership Cards */
-.membership-cards {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 1fr;
-  margin-top: 2rem;
-}
-
-.membership-card {
-  background: white;
-  border: 2px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 1.8rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-  transition: all 0.4s ease;
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-.membership-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-footer {
-  background: #003087;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 3rem;
-}
-
 /* ====================== DISCOVER PAGE ====================== */
-
 .discover-grid {
   display: grid;
   gap: 1.5rem;
@@ -278,3 +224,11 @@ footer {
 .discover-card:nth-child(6) { grid-area: card6; }
 .discover-card:nth-child(7) { grid-area: card7; }
 .discover-card:nth-child(8) { grid-area: card8; }
+
+footer {
+  background: #003087;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
