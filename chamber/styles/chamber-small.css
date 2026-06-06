@@ -155,7 +155,8 @@ button[type="submit"] {
   margin-top: 1.5rem;
 }
 
-/* ====================== DISCOVER PAGE ====================== */
+/* ====================== DISCOVER PAGE GRID ====================== */
+
 .discover-grid {
   display: grid;
   gap: 1.5rem;
@@ -215,7 +216,7 @@ button[type="submit"] {
   font-weight: 600;
 }
 
-/* Named Grid Areas */
+/* Named Grid Areas for Small Screens */
 .discover-card:nth-child(1) { grid-area: card1; }
 .discover-card:nth-child(2) { grid-area: card2; }
 .discover-card:nth-child(3) { grid-area: card3; }
@@ -224,11 +225,3 @@ button[type="submit"] {
 .discover-card:nth-child(6) { grid-area: card6; }
 .discover-card:nth-child(7) { grid-area: card7; }
 .discover-card:nth-child(8) { grid-area: card8; }
-
-footer {
-  background: #003087;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 3rem;
-}
