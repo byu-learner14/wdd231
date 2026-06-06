@@ -26,9 +26,8 @@
   button[type="submit"] {
     width: auto;
   }
-}
 
-@media (min-width: 768px) {
+  /* Discover Grid - Medium Screens */
   .discover-grid {
     grid-template-areas:
       "card1 card2 card3"
@@ -39,6 +38,7 @@
 }
 
 @media (min-width: 1025px) {
+  /* Discover Grid - Large Screens */
   .discover-grid {
     grid-template-areas:
       "card1 card2 card3 card4"
