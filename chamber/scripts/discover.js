@@ -1,24 +1,17 @@
 // scripts/discover.js
-
 import discoverData from '../data/discover.js';
 
-// ====================== HAMBURGER MENU ======================
+// Hamburger Menu
 const menuButton = document.getElementById('menu');
 const navigation = document.getElementById('navigation');
 
 menuButton.addEventListener('click', () => {
   navigation.classList.toggle('show');
-  
-  if (navigation.classList.contains('show')) {
-    menuButton.textContent = '✕';
-    menuButton.setAttribute('aria-expanded', 'true');
-  } else {
-    menuButton.textContent = '☰';
-    menuButton.setAttribute('aria-expanded', 'false');
-  }
+  menuButton.textContent = navigation.classList.contains('show') ? '✕' : '☰';
+  menuButton.setAttribute('aria-expanded', navigation.classList.contains('show'));
 });
 
-// ====================== LOCALSTORAGE VISIT MESSAGE ======================
+// Visit Message
 function showVisitMessage() {
   const visitMessage = document.getElementById('visit-message');
   const lastVisit = localStorage.getItem('lastVisit');
@@ -28,31 +21,30 @@ function showVisitMessage() {
     visitMessage.textContent = "Welcome! Let us know if you have any questions.";
   } else {
     const daysSince = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-
-    if (daysSince < 1) {
-      visitMessage.textContent = "Back so soon! Awesome!";
-    } else {
-      visitMessage.textContent = `You last visited ${daysSince} day${daysSince === 1 ? '' : 's'} ago.`;
-    }
+    visitMessage.textContent = daysSince < 1 
+      ? "Back so soon! Awesome!" 
+      : `You last visited ${daysSince} day${daysSince === 1 ? '' : 's'} ago.`;
   }
-
   localStorage.setItem('lastVisit', now);
 }
 
-// ====================== BUILD DISCOVER CARDS ======================
+// Build Cards
 function buildDiscoverCards() {
   const container = document.getElementById('discover-grid');
   container.innerHTML = '';
 
-  discoverData.items.forEach(item => {
+  discoverData.items.forEach((item, index) => {
     const card = document.createElement('div');
     card.className = 'discover-card';
+
+    const isFirst = index === 0;
 
     card.innerHTML = `
       <figure>
         <img src="${item.image}" 
              alt="Photo of ${item.name} in Honolulu, Hawaii" 
-             loading="lazy"
+             loading="${isFirst ? 'eager' : 'lazy'}"
+             fetchpriority="${isFirst ? 'high' : 'auto'}"
              width="300" 
              height="200">
       </figure>
@@ -66,7 +58,7 @@ function buildDiscoverCards() {
   });
 }
 
-// ====================== INITIALIZE ======================
+// Initialize
 document.addEventListener('DOMContentLoaded', () => {
   showVisitMessage();
   buildDiscoverCards();

@@ -1,4 +1,8 @@
-/* chamber-small.css - Mobile First + Optimized for Lighthouse */
+/* chamber-small.css - Mobile First + Lighthouse Optimized */
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
@@ -97,7 +101,7 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-/* Form Styles */
+/* Form Styles (used on join.html) */
 form {
   background: #f8f9fa;
   padding: 2rem 1.5rem;
@@ -155,19 +159,18 @@ button[type="submit"] {
   margin-top: 1.5rem;
 }
 
-/* ====================== DISCOVER PAGE GRID ====================== */
+/* ====================== DISCOVER PAGE GRID - CLS Optimized ====================== */
 .discover-grid {
   display: grid;
   gap: 1.5rem;
   margin: 2rem 0 4rem;
+  grid-template-columns: 1fr;
   grid-template-areas:
     "card1" "card2" "card3" "card4"
     "card5" "card6" "card7" "card8";
-  grid-template-columns: 1fr;
 }
 
 .discover-card {
-  grid-area: auto;
   background: white;
   border-radius: 12px;
   overflow: hidden;
@@ -179,6 +182,7 @@ button[type="submit"] {
   margin: 0;
   height: 200px;
   overflow: hidden;
+  aspect-ratio: 3 / 2;   /* Strong protection against layout shifts */
 }
 
 .discover-card img {
