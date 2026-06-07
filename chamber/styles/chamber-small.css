@@ -1,8 +1,6 @@
-/* chamber-small.css - Mobile First + Lighthouse Optimized */
+/* chamber-small.css - Mobile First + Strong CLS Fixes */
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
@@ -26,12 +24,6 @@ header {
   margin: 0 auto;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
 .logo img {
   width: 70px;
   height: 70px;
@@ -42,18 +34,15 @@ header {
   font-size: 1.5rem;
 }
 
-/* Hamburger Menu */
+/* Navigation */
 #menu {
   font-size: 1.8rem;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
-  min-width: 44px;
-  min-height: 44px;
 }
 
-/* Navigation */
 #navigation ul {
   display: none;
   flex-direction: column;
@@ -64,9 +53,7 @@ header {
   background: #003087;
 }
 
-#navigation.show ul {
-  display: flex;
-}
+#navigation.show ul { display: flex; }
 
 #navigation a {
   color: white;
@@ -74,21 +61,13 @@ header {
   padding: 0.6rem 0;
 }
 
-/* Wayfinding */
 #navigation a.active,
-#navigation a.active:hover {
-  color: #ffd700;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 6px;
-}
-
 #navigation a:hover {
   color: #ffd700;
   text-decoration: underline;
 }
 
-/* Main Content */
+/* Main */
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -101,65 +80,7 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-/* Form Styles (used on join.html) */
-form {
-  background: #f8f9fa;
-  padding: 2rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-fieldset {
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-legend {
-  font-weight: 700;
-  color: #003087;
-  padding: 0 12px;
-}
-
-label {
-  display: block;
-  margin: 1.2rem 0 0.5rem;
-  font-weight: 600;
-}
-
-.required {
-  color: #d32f2f;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  padding: 0.9rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-button[type="submit"] {
-  background: #003087;
-  color: white;
-  padding: 1rem 2.5rem;
-  border: none;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 1.5rem;
-}
-
-/* ====================== DISCOVER PAGE GRID - CLS Optimized ====================== */
+/* Discover Grid - Optimized for CLS */
 .discover-grid {
   display: grid;
   gap: 1.5rem;
@@ -174,7 +95,7 @@ button[type="submit"] {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
@@ -182,7 +103,7 @@ button[type="submit"] {
   margin: 0;
   height: 200px;
   overflow: hidden;
-  aspect-ratio: 3 / 2;   /* Strong protection against layout shifts */
+  aspect-ratio: 300 / 200;   /* Critical for CLS */
 }
 
 .discover-card img {
@@ -205,7 +126,6 @@ button[type="submit"] {
 
 .discover-card p {
   margin: 0.5rem 1rem 1rem;
-  line-height: 1.5;
 }
 
 .learn-more {
@@ -216,10 +136,9 @@ button[type="submit"] {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  font-weight: 600;
 }
 
-/* Named Grid Areas */
+/* Named areas */
 .discover-card:nth-child(1) { grid-area: card1; }
 .discover-card:nth-child(2) { grid-area: card2; }
 .discover-card:nth-child(3) { grid-area: card3; }

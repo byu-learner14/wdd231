@@ -1,14 +1,8 @@
-/* chamber-large.css - Desktop Overrides Only */
+/* chamber-large.css */
 
 @media (min-width: 768px) {
-  .logo img { 
-    width: 90px; 
-    height: 90px; 
-  }
-  
-  .logo h2 { 
-    font-size: 2rem; 
-  }
+  .logo img { width: 90px; height: 90px; }
+  .logo h2 { font-size: 2rem; }
 
   #navigation ul {
     display: flex;
@@ -18,19 +12,11 @@
     background: transparent;
   }
 
-  #menu { 
-    display: none; 
-  }
+  #menu { display: none; }
 
-  main { 
-    padding: 2rem 1rem; 
-  }
-  
-  h1 { 
-    font-size: 2.5rem; 
-  }
+  main { padding: 2rem 1rem; }
+  h1 { font-size: 2.5rem; }
 
-  /* Discover Grid - Tablet */
   .discover-grid {
     grid-template-areas:
       "card1 card2 card3"
@@ -41,7 +27,6 @@
 }
 
 @media (min-width: 1025px) {
-  /* Discover Grid - Desktop */
   .discover-grid {
     grid-template-areas:
       "card1 card2 card3 card4"
