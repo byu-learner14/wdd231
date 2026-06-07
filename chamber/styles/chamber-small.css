@@ -1,16 +1,20 @@
-/* chamber-small.css - Final CLS-Optimized Version */
+/* chamber-small.css - Mobile First + CLS Optimized (System Font for Lighthouse) */
 
 * { box-sizing: border-box; }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   color: #333;
 }
 
-header { background: #003087; color: white; padding: 1rem; }
+header {
+  background-color: #003087;
+  color: white;
+  padding: 1rem;
+}
 
 .header-content {
   display: flex;
@@ -20,17 +24,34 @@ header { background: #003087; color: white; padding: 1rem; }
   margin: 0 auto;
 }
 
-.logo img { width: 70px; height: 70px; }
-.logo h2 { margin: 0; font-size: 1.5rem; }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
+.logo img {
+  width: 70px;
+  height: 70px;
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Hamburger Menu */
 #menu {
   font-size: 1.8rem;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
 }
 
+/* Navigation */
 #navigation ul {
   display: none;
   flex-direction: column;
@@ -41,7 +62,9 @@ header { background: #003087; color: white; padding: 1rem; }
   background: #003087;
 }
 
-#navigation.show ul { display: flex; }
+#navigation.show ul {
+  display: flex;
+}
 
 #navigation a {
   color: white;
@@ -49,10 +72,21 @@ header { background: #003087; color: white; padding: 1rem; }
   padding: 0.6rem 0;
 }
 
+/* Wayfinding */
 #navigation a.active,
-#navigation a:hover { color: #ffd700; text-decoration: underline; }
+#navigation a.active:hover {
+  color: #ffd700;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
 
-/* Main */
+#navigation a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+/* Main Content */
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -65,7 +99,65 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-/* Discover Grid - Strong CLS Fix */
+/* Form Styles */
+form {
+  background: #f8f9fa;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+legend {
+  font-weight: 700;
+  color: #003087;
+  padding: 0 12px;
+}
+
+label {
+  display: block;
+  margin: 1.2rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.required {
+  color: #d32f2f;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background: #003087;
+  color: white;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+/* ====================== DISCOVER PAGE GRID - Strong CLS Fix ====================== */
 .discover-grid {
   display: grid;
   gap: 1.5rem;
@@ -80,7 +172,7 @@ h1 {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -88,7 +180,7 @@ h1 {
   margin: 0;
   height: 200px;
   overflow: hidden;
-  aspect-ratio: 300 / 200;   /* Very important for CLS */
+  aspect-ratio: 300 / 200;
 }
 
 .discover-card img {
@@ -98,9 +190,21 @@ h1 {
   transition: transform 0.4s ease;
 }
 
-.discover-card h2 { margin: 1rem 1rem 0.5rem; color: #003087; }
-.discover-card address { margin: 0 1rem; font-style: normal; color: #555; }
-.discover-card p { margin: 0.5rem 1rem 1rem; }
+.discover-card h2 {
+  margin: 1rem 1rem 0.5rem;
+  color: #003087;
+}
+
+.discover-card address {
+  margin: 0 1rem;
+  font-style: normal;
+  color: #555;
+}
+
+.discover-card p {
+  margin: 0.5rem 1rem 1rem;
+  line-height: 1.5;
+}
 
 .learn-more {
   margin: 0 1rem 1.2rem;
@@ -110,9 +214,10 @@ h1 {
   border: none;
   border-radius: 50px;
   cursor: pointer;
+  font-weight: 600;
 }
 
-/* Named areas */
+/* Named Grid Areas */
 .discover-card:nth-child(1) { grid-area: card1; }
 .discover-card:nth-child(2) { grid-area: card2; }
 .discover-card:nth-child(3) { grid-area: card3; }
