@@ -1,20 +1,16 @@
-/* chamber-small.css - Mobile First + Strong CLS Fixes */
+/* chamber-small.css - Final CLS-Optimized Version */
 
 * { box-sizing: border-box; }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   color: #333;
 }
 
-header {
-  background-color: #003087;
-  color: white;
-  padding: 1rem;
-}
+header { background: #003087; color: white; padding: 1rem; }
 
 .header-content {
   display: flex;
@@ -24,17 +20,9 @@ header {
   margin: 0 auto;
 }
 
-.logo img {
-  width: 70px;
-  height: 70px;
-}
+.logo img { width: 70px; height: 70px; }
+.logo h2 { margin: 0; font-size: 1.5rem; }
 
-.logo h2 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-/* Navigation */
 #menu {
   font-size: 1.8rem;
   background: none;
@@ -62,10 +50,7 @@ header {
 }
 
 #navigation a.active,
-#navigation a:hover {
-  color: #ffd700;
-  text-decoration: underline;
-}
+#navigation a:hover { color: #ffd700; text-decoration: underline; }
 
 /* Main */
 main {
@@ -80,7 +65,7 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-/* Discover Grid - Optimized for CLS */
+/* Discover Grid - Strong CLS Fix */
 .discover-grid {
   display: grid;
   gap: 1.5rem;
@@ -103,7 +88,7 @@ h1 {
   margin: 0;
   height: 200px;
   overflow: hidden;
-  aspect-ratio: 300 / 200;   /* Critical for CLS */
+  aspect-ratio: 300 / 200;   /* Very important for CLS */
 }
 
 .discover-card img {
@@ -113,20 +98,9 @@ h1 {
   transition: transform 0.4s ease;
 }
 
-.discover-card h2 {
-  margin: 1rem 1rem 0.5rem;
-  color: #003087;
-}
-
-.discover-card address {
-  margin: 0 1rem;
-  font-style: normal;
-  color: #555;
-}
-
-.discover-card p {
-  margin: 0.5rem 1rem 1rem;
-}
+.discover-card h2 { margin: 1rem 1rem 0.5rem; color: #003087; }
+.discover-card address { margin: 0 1rem; font-style: normal; color: #555; }
+.discover-card p { margin: 0.5rem 1rem 1rem; }
 
 .learn-more {
   margin: 0 1rem 1.2rem;
