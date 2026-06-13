@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about surfing spots and ocean safety in Hawai‘i. Real-time conditions, spot guides, and essential safety tips.">
     <meta name="author" content="Olivia Crawford">
-    <!-- Open Graph / Social -->
     <meta property="og:title" content="Hawai‘i Surf & Ocean Safety">
     <meta property="og:description" content="Stay safe and informed while enjoying Hawai‘i’s waves.">
     <meta property="og:type" content="website">
     
     <title>Home | Hawai‘i Surf & Ocean Safety</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -30,7 +29,6 @@
             </nav>
         </div>
         
-        <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobile-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -41,7 +39,7 @@
     </header>
 
     <main>
-        <section class="hero" style="background: linear-gradient(rgba(0, 48, 135, 0.65), rgba(0, 48, 135, 0.65)), url('../images/spot5.jpg'); background-size: cover; background-position: center;">
+        <section class="hero" style="background: linear-gradient(rgba(0, 48, 135, 0.65), rgba(0, 48, 135, 0.65)), url('./images/spot5.jpg'); background-size: cover; background-position: center;">
             <h1>Respect the Ocean • Surf Safe</h1>
             <p>Essential information for surfers and ocean lovers in Hawai‘i</p>
             <a href="surf-spots.html" class="btn">Explore Surf Spots</a>
@@ -50,16 +48,12 @@
 
         <section>
             <h2 style="text-align: center; margin-bottom: 2rem;">Current Ocean Conditions</h2>
-            <div id="conditions" style="text-align: center; font-size: 1.1rem;">
-                <!-- Dynamically filled by JavaScript -->
-            </div>
+            <div id="conditions" style="text-align: center; font-size: 1.1rem;"></div>
         </section>
 
         <section style="margin-top: 4rem;">
             <h2 style="text-align: center; margin-bottom: 2rem;">Featured Surf Spots</h2>
-            <div class="card-grid" id="featured-spots">
-                <!-- Dynamically filled by JavaScript -->
-            </div>
+            <div class="card-grid" id="featured-spots"></div>
         </section>
     </main>
 
@@ -75,6 +69,6 @@
         </p>
     </footer>
 
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
