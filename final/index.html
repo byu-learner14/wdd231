@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about surfing spots and ocean safety in Hawai‘i. Real-time conditions, spot guides, and essential safety tips.">
+    <meta name="author" content="Olivia Crawford">
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Hawai‘i Surf & Ocean Safety">
+    <meta property="og:description" content="Stay safe and informed while enjoying Hawai‘i’s waves.">
+    <meta property="og:type" content="website">
+    
+    <title>Home | Hawai‘i Surf & Ocean Safety</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">🌊 Hawai‘i Surf Safety</div>
+            
+            <nav>
+                <button class="hamburger" aria-label="Toggle menu">☰</button>
+                <ul id="desktop-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="surf-spots.html">Surf Spots</a></li>
+                    <li><a href="ocean-safety.html">Ocean Safety</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="surf-spots.html">Surf Spots</a></li>
+                <li><a href="ocean-safety.html">Ocean Safety</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="background: linear-gradient(rgba(0, 48, 135, 0.65), rgba(0, 48, 135, 0.65)), url('../images/spot5.jpg'); background-size: cover; background-position: center;">
+            <h1>Respect the Ocean • Surf Safe</h1>
+            <p>Essential information for surfers and ocean lovers in Hawai‘i</p>
+            <a href="surf-spots.html" class="btn">Explore Surf Spots</a>
+            <a href="ocean-safety.html" class="btn" style="margin-left: 1rem;">Safety Guidelines</a>
+        </section>
+
+        <section>
+            <h2 style="text-align: center; margin-bottom: 2rem;">Current Ocean Conditions</h2>
+            <div id="conditions" style="text-align: center; font-size: 1.1rem;">
+                <!-- Dynamically filled by JavaScript -->
+            </div>
+        </section>
+
+        <section style="margin-top: 4rem;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Featured Surf Spots</h2>
+            <div class="card-grid" id="featured-spots">
+                <!-- Dynamically filled by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Hawai‘i Surf & Ocean Safety</p>
+        <p>
+            <a href="attributions.html" style="color: var(--secondary);">Attributions</a> |
+            <a href="form-submission.html" style="color: var(--secondary);">Report Safety Issue</a>
+        </p>
+        <p>
+            <a href="YOUR_VIDEO_LINK_HERE" target="_blank" style="color: var(--secondary);">Watch Project Video</a>
+        </p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

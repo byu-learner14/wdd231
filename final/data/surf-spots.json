@@ -1,0 +1,169 @@
+{
+  "spots": [
+    {
+      "id": 1,
+      "name": "Waikiki Beach",
+      "island": "Oahu",
+      "difficulty": "Beginner",
+      "bestSeason": "Year-round",
+      "swellDirection": "South",
+      "description": "Iconic spot perfect for beginners with gentle waves and beautiful views.",
+      "latitude": 21.2745,
+      "longitude": -157.8214
+    },
+    {
+      "id": 2,
+      "name": "Pipeline",
+      "island": "Oahu",
+      "difficulty": "Advanced",
+      "bestSeason": "Winter",
+      "swellDirection": "North",
+      "description": "World-famous powerful waves that challenge even the best surfers.",
+      "latitude": 21.665,
+      "longitude": -158.05
+    },
+    {
+      "id": 3,
+      "name": "Honolua Bay",
+      "island": "Maui",
+      "difficulty": "Intermediate",
+      "bestSeason": "Winter",
+      "swellDirection": "Northwest",
+      "description": "Beautiful bay with excellent right-hand waves and scenic cliffs.",
+      "latitude": 21.01,
+      "longitude": -156.64
+    },
+    {
+      "id": 4,
+      "name": "Ho'okipa Beach",
+      "island": "Maui",
+      "difficulty": "Intermediate",
+      "bestSeason": "Year-round",
+      "swellDirection": "North",
+      "description": "Famous for windsurfing and powerful waves.",
+      "latitude": 20.93,
+      "longitude": -156.36
+    },
+    {
+      "id": 5,
+      "name": "Lahaina Harbor",
+      "island": "Maui",
+      "difficulty": "Beginner",
+      "bestSeason": "Summer",
+      "swellDirection": "South",
+      "description": "Protected waters ideal for learning.",
+      "latitude": 20.87,
+      "longitude": -156.68
+    },
+    {
+      "id": 6,
+      "name": "Banyans",
+      "island": "Big Island",
+      "difficulty": "Intermediate",
+      "bestSeason": "Winter",
+      "swellDirection": "North",
+      "description": "Fast and powerful waves near Kailua-Kona.",
+      "latitude": 19.62,
+      "longitude": -155.98
+    },
+    {
+      "id": 7,
+      "name": "Kahaluu Beach",
+      "island": "Big Island",
+      "difficulty": "Beginner",
+      "bestSeason": "Year-round",
+      "swellDirection": "West",
+      "description": "Family-friendly with calm waters and turtles.",
+      "latitude": 19.58,
+      "longitude": -155.96
+    },
+    {
+      "id": 8,
+      "name": "Sunset Beach",
+      "island": "Oahu",
+      "difficulty": "Advanced",
+      "bestSeason": "Winter",
+      "swellDirection": "North",
+      "description": "Huge winter swells and epic sunsets.",
+      "latitude": 21.68,
+      "longitude": -158.04
+    },
+    {
+      "id": 9,
+      "name": "Makaha Beach",
+      "island": "Oahu",
+      "difficulty": "Intermediate",
+      "bestSeason": "Winter",
+      "swellDirection": "West",
+      "description": "Long rides and powerful waves.",
+      "latitude": 21.47,
+      "longitude": -158.22
+    },
+    {
+      "id": 10,
+      "name": "Pe'ahi (Jaws)",
+      "island": "Maui",
+      "difficulty": "Expert",
+      "bestSeason": "Winter",
+      "swellDirection": "North",
+      "description": "One of the most dangerous big-wave spots in the world.",
+      "latitude": 20.94,
+      "longitude": -156.29
+    },
+    {
+      "id": 11,
+      "name": "Haleiwa Ali'i Beach",
+      "island": "Oahu",
+      "difficulty": "Intermediate",
+      "bestSeason": "Winter",
+      "swellDirection": "North",
+      "description": "Popular contest site with consistent waves.",
+      "latitude": 21.59,
+      "longitude": -158.11
+    },
+    {
+      "id": 12,
+      "name": "Kailua Beach",
+      "island": "Oahu",
+      "difficulty": "Beginner",
+      "bestSeason": "Summer",
+      "swellDirection": "East",
+      "description": "Beautiful beach great for learning and kayaking.",
+      "latitude": 21.40,
+      "longitude": -157.73
+    },
+    {
+      "id": 13,
+      "name": "Pohoiki",
+      "island": "Big Island",
+      "difficulty": "Intermediate",
+      "bestSeason": "Year-round",
+      "swellDirection": "East",
+      "description": "New black sand beach with fun waves.",
+      "latitude": 19.45,
+      "longitude": -154.82
+    },
+    {
+      "id": 14,
+      "name": "Mokuleia Beach",
+      "island": "Oahu",
+      "difficulty": "Advanced",
+      "bestSeason": "Winter",
+      "swellDirection": "Northwest",
+      "description": "Remote and powerful surf spot.",
+      "latitude": 21.58,
+      "longitude": -158.15
+    },
+    {
+      "id": 15,
+      "name": "Maalaea Beach",
+      "island": "Maui",
+      "difficulty": "Intermediate",
+      "bestSeason": "Summer",
+      "swellDirection": "South",
+      "description": "Consistent waves with great views of Haleakala.",
+      "latitude": 20.79,
+      "longitude": -156.51
+    }
+  ]
+}

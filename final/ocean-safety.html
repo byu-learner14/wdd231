@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Essential ocean safety guidelines, rip currents, marine life, and emergency information for Hawai‘i.">
+    <meta name="author" content="Olivia Crawford">
+    <meta property="og:title" content="Ocean Safety | Hawai‘i Surf & Ocean Safety">
+    
+    <title>Ocean Safety | Hawai‘i Surf & Ocean Safety</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">🌊 Hawai‘i Surf Safety</div>
+            
+            <nav>
+                <button class="hamburger" aria-label="Toggle menu">☰</button>
+                <ul id="desktop-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="surf-spots.html">Surf Spots</a></li>
+                    <li><a href="ocean-safety.html" class="active">Ocean Safety</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="surf-spots.html">Surf Spots</a></li>
+                <li><a href="ocean-safety.html">Ocean Safety</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h1 style="text-align: center; margin: 2rem 0;">Ocean Safety Guidelines</h1>
+        
+        <div class="card-grid" id="safety-tips">
+            <!-- Dynamically generated -->
+        </div>
+
+        <section style="margin-top: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+            <h2 style="text-align: center;">Report a Safety Concern</h2>
+            <form id="safety-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required>
+
+                <label for="location">Location / Beach</label>
+                <input type="text" id="location" required>
+
+                <label for="issue">Issue / Concern</label>
+                <textarea id="issue" rows="5" required></textarea>
+
+                <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Submit Report</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Hawai‘i Surf & Ocean Safety</p>
+        <p>
+            <a href="attributions.html" style="color: var(--secondary);">Attributions</a> |
+            <a href="form-submission.html" style="color: var(--secondary);">View Reports</a>
+        </p>
+        <p>
+            <a href="YOUR_VIDEO_LINK_HERE" target="_blank" style="color: var(--secondary);">Watch Project Video</a>
+        </p>
+    </footer>
+
+    <script type="module" src="js/safety.js"></script>
+</body>
+</html>
