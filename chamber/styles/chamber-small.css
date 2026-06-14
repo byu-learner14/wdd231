@@ -1,4 +1,4 @@
-/* chamber-small.css - Mobile First + CLS Optimized (System Font for Lighthouse) */
+/* chamber-small.css - Mobile First */
 
 * { box-sizing: border-box; }
 
@@ -10,11 +10,7 @@ body {
   color: #333;
 }
 
-header {
-  background-color: #003087;
-  color: white;
-  padding: 1rem;
-}
+header { background: #003087; color: white; padding: 1rem; }
 
 .header-content {
   display: flex;
@@ -24,34 +20,18 @@ header {
   margin: 0 auto;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
+.logo { display: flex; align-items: center; gap: 1rem; }
+.logo img { width: 70px; height: 70px; }
+.logo span { font-size: 1.5rem; font-weight: 700; }   /* span instead of h2 */
 
-.logo img {
-  width: 70px;
-  height: 70px;
-}
-
-.logo h2 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-/* Hamburger Menu */
 #menu {
   font-size: 1.8rem;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
-  min-width: 44px;
-  min-height: 44px;
 }
 
-/* Navigation */
 #navigation ul {
   display: none;
   flex-direction: column;
@@ -62,9 +42,7 @@ header {
   background: #003087;
 }
 
-#navigation.show ul {
-  display: flex;
-}
+#navigation.show ul { display: flex; }
 
 #navigation a {
   color: white;
@@ -72,92 +50,14 @@ header {
   padding: 0.6rem 0;
 }
 
-/* Wayfinding */
 #navigation a.active,
-#navigation a.active:hover {
-  color: #ffd700;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 6px;
-}
+#navigation a:hover { color: #ffd700; text-decoration: underline; }
 
-#navigation a:hover {
-  color: #ffd700;
-  text-decoration: underline;
-}
+/* Main */
+main { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+h1 { text-align: center; color: #003087; margin-bottom: 1.5rem; }
 
-/* Main Content */
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-h1 {
-  text-align: center;
-  color: #003087;
-  margin-bottom: 1.5rem;
-}
-
-/* Form Styles */
-form {
-  background: #f8f9fa;
-  padding: 2rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-fieldset {
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-legend {
-  font-weight: 700;
-  color: #003087;
-  padding: 0 12px;
-}
-
-label {
-  display: block;
-  margin: 1.2rem 0 0.5rem;
-  font-weight: 600;
-}
-
-.required {
-  color: #d32f2f;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  padding: 0.9rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-button[type="submit"] {
-  background: #003087;
-  color: white;
-  padding: 1rem 2.5rem;
-  border: none;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 1.5rem;
-}
-
-/* ====================== DISCOVER PAGE GRID - Strong CLS Fix ====================== */
+/* Discover Grid */
 .discover-grid {
   display: grid;
   gap: 1.5rem;
@@ -172,8 +72,8 @@ button[type="submit"] {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 }
 
 .discover-card figure {
@@ -190,21 +90,19 @@ button[type="submit"] {
   transition: transform 0.4s ease;
 }
 
-.discover-card h2 {
-  margin: 1rem 1rem 0.5rem;
-  color: #003087;
+/* Image Hover Effect */
+.discover-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
 }
 
-.discover-card address {
-  margin: 0 1rem;
-  font-style: normal;
-  color: #555;
+.discover-card:hover img {
+  transform: scale(1.08);
 }
 
-.discover-card p {
-  margin: 0.5rem 1rem 1rem;
-  line-height: 1.5;
-}
+.discover-card h2 { margin: 1rem 1rem 0.5rem; color: #003087; }
+.discover-card address { margin: 0 1rem; font-style: normal; color: #555; }
+.discover-card p { margin: 0.5rem 1rem 1rem; }
 
 .learn-more {
   margin: 0 1rem 1.2rem;
@@ -214,7 +112,6 @@ button[type="submit"] {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  font-weight: 600;
 }
 
 /* Named Grid Areas */
