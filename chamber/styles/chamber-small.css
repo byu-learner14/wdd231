@@ -1,4 +1,4 @@
-/* chamber-small.css - Mobile First */
+/* chamber-small.css - Mobile First + All Fixes */
 
 * { box-sizing: border-box; }
 
@@ -10,7 +10,11 @@ body {
   color: #333;
 }
 
-header { background: #003087; color: white; padding: 1rem; }
+header {
+  background-color: #003087;
+  color: white;
+  padding: 1rem;
+}
 
 .header-content {
   display: flex;
@@ -20,18 +24,34 @@ header { background: #003087; color: white; padding: 1rem; }
   margin: 0 auto;
 }
 
-.logo { display: flex; align-items: center; gap: 1rem; }
-.logo img { width: 70px; height: 70px; }
-.logo span { font-size: 1.5rem; font-weight: 700; }   /* span instead of h2 */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
+.logo img {
+  width: 70px;
+  height: 70px;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Hamburger Menu */
 #menu {
   font-size: 1.8rem;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
 }
 
+/* Navigation */
 #navigation ul {
   display: none;
   flex-direction: column;
@@ -42,7 +62,9 @@ header { background: #003087; color: white; padding: 1rem; }
   background: #003087;
 }
 
-#navigation.show ul { display: flex; }
+#navigation.show ul {
+  display: flex;
+}
 
 #navigation a {
   color: white;
@@ -50,14 +72,83 @@ header { background: #003087; color: white; padding: 1rem; }
   padding: 0.6rem 0;
 }
 
+/* Wayfinding */
 #navigation a.active,
-#navigation a:hover { color: #ffd700; text-decoration: underline; }
+#navigation a.active:hover {
+  color: #ffd700;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
 
-/* Main */
-main { max-width: 1200px; margin: 0 auto; padding: 1rem; }
-h1 { text-align: center; color: #003087; margin-bottom: 1.5rem; }
+#navigation a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
 
-/* Discover Grid */
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: #003087;
+  margin-bottom: 1.5rem;
+}
+
+/* ====================== DIRECTORY VIEW TOGGLE ====================== */
+.view-controls {
+  text-align: center;
+  margin: 1.5rem 0 2rem;
+}
+
+.view-controls button {
+  padding: 0.7rem 1.4rem;
+  margin: 0 0.5rem;
+  border: 2px solid #003087;
+  background: white;
+  color: #003087;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.view-controls button.active,
+.view-controls button:hover {
+  background: #003087;
+  color: white;
+}
+
+/* Grid View (default) */
+#directory-container.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* List View - No Images */
+#directory-container.list-view {
+  display: block;
+}
+
+#directory-container.list-view .member-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+#directory-container.list-view .member-card img {
+  display: none;   /* Required by rubric */
+}
+
+/* Discover Page Styles */
 .discover-grid {
   display: grid;
   gap: 1.5rem;
@@ -90,7 +181,6 @@ h1 { text-align: center; color: #003087; margin-bottom: 1.5rem; }
   transition: transform 0.4s ease;
 }
 
-/* Image Hover Effect */
 .discover-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 25px rgba(0,0,0,0.15);
@@ -114,7 +204,7 @@ h1 { text-align: center; color: #003087; margin-bottom: 1.5rem; }
   cursor: pointer;
 }
 
-/* Named Grid Areas */
+/* Named Grid Areas for Discover */
 .discover-card:nth-child(1) { grid-area: card1; }
 .discover-card:nth-child(2) { grid-area: card2; }
 .discover-card:nth-child(3) { grid-area: card3; }
