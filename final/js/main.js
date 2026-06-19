@@ -1,8 +1,6 @@
 // js/main.js
-import { spots } from '../data/surf-spots.json' assert { type: 'json' };
-
 document.addEventListener('DOMContentLoaded', () => {
-    // Hamburger Menu (shared across pages)
+    // Hamburger Menu
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -12,32 +10,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Featured Spots on Home
+    // Featured Spots on Home - Fetch data here instead
     const featuredContainer = document.getElementById('featured-spots');
     if (featuredContainer) {
-        const shuffled = [...spots].sort(() => 0.5 - Math.random());
-        const featured = shuffled.slice(0, 3);
+        fetch('./data/surf-spots.json')
+            .then(response => response.json())
+            .then(data => {
+                const spots = data.spots;
+                const shuffled = [...spots].sort(() => 0.5 - Math.random());
+                const featured = shuffled.slice(0, 3);
 
-        featured.forEach(spot => {
-            const cardHTML = `
-                <div class="card">
-                    <img src="../images/spot${(spot.id % 5) + 1}.jpg" 
-                         alt="${spot.name} surf spot in ${spot.island}" 
-                         loading="lazy"
-                         width="400" height="200">
-                    <div class="card-content">
-                        <span class="difficulty" style="background-color: ${getDifficultyColor(spot.difficulty)};">
-                            ${spot.difficulty}
-                        </span>
-                        <h3>${spot.name}</h3>
-                        <p><strong>${spot.island}</strong></p>
-                        <p>${spot.description.substring(0, 90)}...</p>
-                        <a href="surf-spots.html" class="btn">View Details</a>
-                    </div>
-                </div>
-            `;
-            featuredContainer.innerHTML += cardHTML;
-        });
+                featured.forEach(spot => {
+                    const cardHTML = `
+                        <div class="card">
+                            <img src="./images/spot${(spot.id % 5) + 1}.jpg" 
+                                 alt="${spot.name} surf spot in ${spot.island}" 
+                                 loading="lazy"
+                                 width="400" height="200">
+                            <div class="card-content">
+                                <span class="difficulty" style="background-color: ${getDifficultyColor(spot.difficulty)};">
+                                    ${spot.difficulty}
+                                </span>
+                                <h3>${spot.name}</h3>
+                                <p><strong>${spot.island}</strong></p>
+                                <p>${spot.description.substring(0, 90)}...</p>
+                                <a href="surf-spots.html" class="btn">View Details</a>
+                            </div>
+                        </div>
+                    `;
+                    featuredContainer.innerHTML += cardHTML;
+                });
+            })
+            .catch(error => {
+                console.error('Error loading featured spots:', error);
+            });
     }
 
     // Current Conditions Widget
