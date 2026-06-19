@@ -15,7 +15,7 @@ body {
     background-color: var(--light);
 }
 
-/* ==================== NAVIGATION ==================== */
+/* Navigation */
 header {
     background-color: var(--primary);
     color: white;
@@ -67,22 +67,16 @@ nav a:hover, nav a.active { color: var(--secondary); }
     border-top: 1px solid rgba(255,255,255,0.3);
 }
 
-.mobile-menu.active {
-    display: block;
-}
+.mobile-menu.active { display: block; }
 
-.mobile-menu ul {
-    list-style: none;
-    padding: 0 1rem;
-}
-
+.mobile-menu ul { list-style: none; padding: 0 1rem; }
 .mobile-menu li { margin: 0.8rem 0; }
 
-/* ==================== MAIN STYLES ==================== */
+/* Main Content */
 main { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
 
 .hero {
-    background: linear-gradient(rgba(0, 48, 135, 0.65), rgba(0, 48, 135, 0.65)), url('../images/spot5.jpg');
+    background: linear-gradient(rgba(0, 48, 135, 0.65), rgba(0, 48, 135, 0.65)), url('./images/spot5.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -135,8 +129,35 @@ main { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
     font-weight: 600;
     display: inline-block;
     margin-top: 0.5rem;
+    cursor: pointer;
 }
 
+/* ==================== FORM STYLING ==================== */
+form label {
+    display: block;
+    margin: 1.2rem 0 0.5rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.9rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--secondary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 178, 169, 0.2);
+}
+
+/* Footer */
 footer {
     background-color: var(--primary);
     color: white;
@@ -145,10 +166,16 @@ footer {
     margin-top: 3rem;
 }
 
-/* ==================== RESPONSIVE ==================== */
+footer a {
+    color: #a5d6ff;
+    text-decoration: underline;
+}
+
+footer a:hover { color: white; }
+
+/* Responsive */
 @media (max-width: 768px) {
     .hamburger { display: block; }
     nav ul { display: none; }
-    
     .hero h1 { font-size: 2.2rem; }
 }
